@@ -1,0 +1,19 @@
+{
+  "id": "p001",
+  "slug": "p001-pyrite-obsidian-bracelet",
+  "sku": "P001",
+  "category": "pyrite",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "金運石黑珠手串", "zh-Hans": "金运石黑珠手串", "en": "Pyrite Dark Bead Bracelet" },
+  "summary": { "zh-Hant": "金運石配黑珠手串。", "zh-Hans": "金运石配黑珠手串。", "en": "A pyrite and dark bead bracelet." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["pyrite/p001.jpg", "pyrite/p001-b.jpg", "pyrite/p001-c.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢金運石黑珠手串 P001。",
+    "zh-Hans": "你好，我想预约查询金运石黑珠手串 P001。",
+    "en": "Hello, I would like to book a viewing for pyrite bracelet P001."
+  }
+}

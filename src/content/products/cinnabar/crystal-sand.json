@@ -1,0 +1,19 @@
+{
+  "id": "crystal-sand",
+  "slug": "crystal-sand-cinnabar",
+  "sku": "CRYSTAL-SAND",
+  "category": "cinnabar",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "晶體砂", "zh-Hans": "晶体砂", "en": "Crystal Cinnabar" },
+  "summary": { "zh-Hant": "晶體砂，獨一無二。", "zh-Hans": "晶体砂，独一无二。", "en": "A unique crystalline cinnabar piece." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["cinnabar/crystal-sand.jpg", "cinnabar/crystal-sand-b.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢晶體砂。",
+    "zh-Hans": "你好，我想预约查询晶体砂。",
+    "en": "Hello, I would like to book a viewing for the crystal cinnabar."
+  }
+}

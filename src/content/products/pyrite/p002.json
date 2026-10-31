@@ -1,0 +1,19 @@
+{
+  "id": "p002",
+  "slug": "p002-pyrite-citrine-bracelet",
+  "sku": "P002",
+  "category": "pyrite",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "金運石黃珠手串", "zh-Hans": "金运石黄珠手串", "en": "Pyrite Golden Bead Bracelet" },
+  "summary": { "zh-Hant": "金運石配黃珠手串。", "zh-Hans": "金运石配黄珠手串。", "en": "A pyrite and golden bead bracelet." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["pyrite/p002.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢金運石黃珠手串 P002。",
+    "zh-Hans": "你好，我想预约查询金运石黄珠手串 P002。",
+    "en": "Hello, I would like to book a viewing for pyrite bracelet P002."
+  }
+}

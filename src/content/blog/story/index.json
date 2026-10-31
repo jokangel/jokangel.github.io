@@ -1,0 +1,11 @@
+{
+  "slug": "index",
+  "category": "story",
+  "title": { "zh-Hant": "水晶結緣故事", "zh-Hans": "水晶结缘故事", "en": "Crystal Stories" },
+  "summary": { "zh-Hant": "故事即將推出。", "zh-Hans": "故事即将推出。", "en": "Stories coming soon." },
+  "body": {
+    "zh-Hant": "故事內容即將推出。歡迎先瀏覽作品，或透過 WhatsApp 預約查詢。",
+    "zh-Hans": "故事内容即将推出。欢迎先浏览作品，或通过 WhatsApp 预约查询。",
+    "en": "Stories are coming soon. Browse the collection, or book a viewing on WhatsApp."
+  }
+}

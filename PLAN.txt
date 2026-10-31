@@ -1,0 +1,80 @@
+You are a professional Frontend Developer and UI UX Designer, you are designing a page for Jokangel, which is a Hong Kong Crystals and Accessories brand.
+The website language should be localized in Traditional Chinese, Simplified Chinese, English. By default, should be Traditional Chinese.
+
+Tech Stack:
+next.js static website, use Github Pages to host.
+
+Pages:
+
+/
+Home Page
+
+Layout:
+Hero Section
+公司簡介
+Link to Subpage: 水晶結緣故事 (/blog/story)
+Link to cases: 案例分享 (/blog/cases/...)
+Highlighted Products
+
+
+/products
+Browser for viewing all products with a selection screen
+Include a search bar.
+
+/products/<category>/<subcategory>
+
+Categories and Subcategories:
+水晶
+- 金髮晶
+- 彩髮晶
+- 碧璽
+- DIY系列水晶
+紫晶洞
+琥珀/蜜蜡
+沉香
+天鐵
+珠砂
+(Note: as we are doing static page, don't code as dynamic)
+
+
+/others
+合作伙伴：
+旅游团 - 全国包小团
+雇佣公司
+装修连智能家居+空气水质净化服务
+私补 / 钢琴
+网站设计
+健康咨询（减肥、湿疹、三高、痛症）
+租借课室
+
+/others/<category>
+
+
+/contact
+查詢/訂購
+WhatsApp: +852 68888464
+
+
+Blog:
+/blog/<category>/<subcategory>
+
+---
+
+Resources:
+The images are stored in /resources, please copy the required images over to the assets if needed.
+
+Please use a file-driven approach, to store the data. It should be dynamic using file components
+(Generate static pages from JSON)
+Prices should not be shown, only the product. The user should contact to ask for an appointment.
+The products are more for showcase, as crystals are unique.
+---
+
+Coding Guidelines:
+Use next.js Router for the pages.
+404 page should be designed as well
+Make use of reusable components, plan ahead what components we might need and build all of them before starting to avoid duplicates.
+Navbar should be shared between pages.
+The website should be smooth and have some animations.
+
+For future updating:
+Create skills for adding/updating categories, products, services, navbar updates, etc. (All data-driven items) Cover more cases, as we want to shorten the process of updating.

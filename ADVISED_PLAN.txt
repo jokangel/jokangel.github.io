@@ -1,0 +1,446 @@
+JOKAngel Crystal — Advised Website Plan
+Source: PLAN.txt, reconciled with /resources.
+Status: spec only. Do not treat this as permission to invent missing copy, prices, or SKUs.
+
+This file replaces PLAN.txt as the build spec. Keep PLAN.txt as the original brief.
+
+
+============================================================
+1. Goal and non-goals
+============================================================
+
+Goal
+- Static showcase site for JOKAngel Crystal, a Hong Kong crystals and accessories brand.
+- Pieces are unique. Visitors browse photos, read light brand/story content, see partner services, and book an appointment on WhatsApp. No prices on the site.
+
+Non-goals for v1
+- No prices, cart, checkout, payments, accounts, or inventory sync.
+- No CMS, no runtime database, no Next.js middleware (incompatible with static export).
+- No Cursor update-skills until the site data shape is stable (Phase 2).
+- Do not publish empty categories, leftover installer/PPTX files, or AI watermarks.
+
+
+============================================================
+2. Locked decisions
+============================================================
+
+Brand
+- Display name: JOKAngel Crystal
+- Tone: refined, calm, premium. Not playful, not neon e-commerce.
+
+Languages
+- zh-Hant (default), zh-Hans, en.
+- Cookie-based, not routing-based. URLs never include a locale segment.
+- UI chrome, nav, buttons, and empty states are translated on the client from the cookie.
+- Product names and descriptions: Traditional Chinese is source of truth. Provide zh-Hans and en fields; if a translation is missing, fall back to zh-Hant. Do not auto-machine-translate in the build.
+- Do not sniff navigator.language. Default stays Traditional Chinese until the visitor picks another language.
+
+Tech
+- Next.js App Router.
+- output: 'export' for GitHub Pages.
+- trailingSlash: true.
+- TypeScript + CSS modules or Tailwind. Pick one styling system and keep it.
+- Images: next/image with unoptimized: true (required for static export).
+- i18n: one URL per page. Locale lives in a cookie (and localStorage backup).
+  Example: /products/cinnabar/ stays /products/cinnabar/ in every language.
+- No middleware, no locale generateStaticParams, no /zh-Hant root redirect.
+  Static export cannot read cookies on the server; the first HTML is always zh-Hant, then the client applies the saved locale before paint (see section 10).
+- basePath: '' if hosted at <user>.github.io. If hosted at <user>.github.io/<repo>, set basePath to '/<repo>'.
+- File-driven content: JSON/MD in /content is imported at build time and turned into static pages (“Generate static pages from JSON”). URLs are not fetched from an API.
+
+Commerce
+- Showcase + WhatsApp 查詢／訂購 only. No price anywhere in the UI.
+- WhatsApp: +852 68888464
+- Appointment link format:
+  https://wa.me/85268888464?text=<urlencoded 預約查詢 + product name + url>
+- Filenames that contain $ amounts are only for grouping photos. Do not import or render those numbers.
+
+Corrections from PLAN.txt
+- 珠砂 → 朱砂.
+- Add resource categories that already exist: 舒俱萊, 金運石.
+- Product detail pages are required.
+- Blog is file-driven under /blog/[category]/[slug]. Home teasers use the first two categories: story, cases.
+
+
+============================================================
+3. Routes
+============================================================
+
+No locale in the path. Language is cookie state, so every URL is shareable and language-neutral.
+
+/                                      Home
+/products                              All products + search + category selection
+/products/[category]                   Category index
+/products/[category]/[sub]             Subcategory index (only if the category has subs)
+/products/[category]/[slug]            Product detail
+                                       If a category has subs: /products/[category]/[sub]/[slug]
+/blog                                  Blog index (all categories)
+/blog/[category]                       Blog category (story, cases, later ones from JSON)
+/blog/[category]/[slug]                One article
+/others                                Partner / service index
+/others/[slug]                         One partner / service
+/contact                               查詢／訂購
+/404                                   Branded not-found
+
+Home still links to /blog/story and /blog/cases. Those are blog categories, not special routes.
+PLAN.txt wrote /blog/<category>/<subcategory>; treat the last segment as the article slug.
+
+URL slugs are English and stable. Visible labels come from i18n files.
+Do not put Chinese characters in routes.
+
+
+============================================================
+4. Catalog
+============================================================
+
+4.1 Category tree
+
+id            | zh-Hant     | parent   | v1 visibility              | /resources
+--------------|-------------|----------|----------------------------|---------------------------
+crystals      | 水晶         | —        | visible, landing only      | none
+gold-rutile   | 金髮晶       | crystals | hidden until assets exist  | none
+color-rutile  | 彩髮晶       | crystals | hidden until assets exist  | none
+tourmaline    | 碧璽         | crystals | hidden until assets exist  | none
+diy           | DIY系列水晶  | crystals | hidden until assets exist  | none
+amethyst-geode| 紫晶洞       | —        | hidden until assets exist  | none
+amber         | 琥珀／蜜蠟    | —        | hidden until assets exist  | none
+agarwood      | 沉香         | —        | hidden until assets exist  | none
+meteorite     | 天鐵         | —        | visible                    | ProductInfo/天鐵
+cinnabar      | 朱砂         | —        | visible                    | ProductInfo/朱砂
+sugilite      | 舒俱萊       | —        | visible                    | ProductInfo/舒俱萊
+pyrite        | 金運石       | —        | visible                    | ProductInfo/金運石
+
+v1 ships only visible categories that have at least one product file with an image.
+Hidden categories stay in content/categories.json with "visible": false so they can be turned on later without a route rewrite.
+
+4.2 v1 product seed (from filenames that already encode identity)
+
+Group obvious duplicate shots of the same piece under one product. Do not invent extra SKUs.
+Never copy a $ amount from a filename into JSON or the UI.
+
+Cinnabar / 朱砂
+- z001  原礦朱砂    images: Z001 原礦朱砂$2000.jpg
+- z002  原礦朱砂    images: Z002 原礦朱砂$3500.jpg
+- z003  原礦朱砂    images: Z003 原礦朱砂$3500.jpg
+- x001  朱砂        images: X001 $580.jpg, X001.jpg, X001a.jpg
+- x002  原礦朱砂    images: X002 原礦朱砂$2200.jpg
+- b001  紫金砂      images: B001 紫金砂*.jpg
+- red-sand  紅砂    images: 紅砂.jpg, 紅砂 (2).jpg
+- crystal-sand 晶體砂  images: 晶體砂.jpg, 晶體砂001.jpg
+
+Meteorite / 天鐵, Sugilite / 舒俱萊, Pyrite / 金運石
+- Create one showcase product per clearly distinct piece after images are reviewed.
+- UUID-named files are assets only. They are not product names.
+
+Ignore / do not copy into public assets
+- resources/ProductInfo/金運石/CursorUserSetup-x64-3.24.18.exe
+- resources/ProductInfo/朱砂/*.pptx
+- Any image whose main subject is a 豆包AI生成 watermark, unless a clean crop exists.
+- Nested folder name 新增資料夾 is not a subcategory. Flatten useful files when copying.
+
+Video
+- 朱砂/001.mp4 and 002.mp4 may be attached to a cinnabar product or the category page once ownership is confirmed. Optional in v1.
+
+
+============================================================
+5. Content files (source of truth)
+============================================================
+
+All site data lives under /content. Pages read these files at build time.
+
+content/
+  site.json                 nav, featured product ids, WhatsApp, social
+  categories.json           tree in section 4.1
+  products/
+    cinnabar/z001.json
+    cinnabar/x001.json
+    meteorite/...
+    ...
+  others.json               partner / service entries
+  blog/
+    categories.json         story, cases, later categories
+    story/
+      index.md              水晶結緣故事 (single-page category is allowed)
+    cases/
+      <slug>.md
+  i18n/
+    zh-Hant.json
+    zh-Hans.json
+    en.json
+
+5.1 Product file schema
+
+{
+  "id": "z001",
+  "slug": "z001-raw-cinnabar",
+  "sku": "Z001",
+  "category": "cinnabar",
+  "subcategory": null,
+  "status": "published",          // published | hidden | sold
+  "name": {
+    "zh-Hant": "原礦朱砂",
+    "zh-Hans": "原矿朱砂",
+    "en": "Raw Cinnabar"
+  },
+  "summary": { "zh-Hant": "", "zh-Hans": "", "en": "" },
+  "description": { "zh-Hant": "", "zh-Hans": "", "en": "" },
+  "images": ["cinnabar/z001.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": { "zh-Hant": "你好，我想預約查詢原礦朱砂 Z001。", "zh-Hans": "", "en": "" }
+}
+
+Rules
+- Missing translation falls back to zh-Hant.
+- Empty description is allowed. Do not generate spiritual claims or medical claims.
+- No price field. Do not add priceHkd / priceVisible later “just in case”.
+- Search indexes: name, sku, category labels, summary.
+
+5.2 others.json schema
+
+{
+  "slug": "health",
+  "name": { "zh-Hant": "健康諮詢", "zh-Hans": "健康咨询", "en": "Health Consultation" },
+  "summary": { "zh-Hant": "減肥、濕疹、三高、痛症", "zh-Hans": "", "en": "" },
+  "description": { "zh-Hant": "", "zh-Hans": "", "en": "" },
+  "image": null,
+  "contactNote": { "zh-Hant": "歡迎 WhatsApp 查詢轉介。", "zh-Hans": "", "en": "" }
+}
+
+v1 partner slugs (from PLAN.txt; copy still needed)
+
+slug            | zh-Hant
+----------------|------------------------------------------
+tours           | 旅遊團 — 全國包小團
+recruitment     | 僱傭公司
+home-living     | 裝修連智能家居＋空氣水質淨化服務
+tuition         | 私補／鋼琴
+web-design      | 網站設計
+health          | 健康諮詢（減肥、濕疹、三高、痛症）
+classroom       | 租借課室
+
+These are referral/partner pages, not Jokangel products. Keep the visual system consistent but do not dress them as crystal SKUs.
+
+
+============================================================
+6. Page specs
+============================================================
+
+Home /
+1. Hero: logo lockup (wordmark 27cd9b58-... or equivalent clean crop) + short line + CTA to products and WhatsApp.
+2. 公司簡介: short about + certification thumbnails from resources/CompanyInfo/Certifications. Body copy is required from the owner; until then use a one-sentence placeholder that does not invent history.
+3. Highlighted products: product ids listed in site.json featured[]. Use real published products only. Suggested seed: z001, x001, b001 plus one meteorite once selected.
+4. Story teaser → /blog/story
+5. Cases teaser → /blog/cases
+6. Partners teaser → /others
+7. Primary contact CTA label: 查詢／訂購
+
+Products /products
+- Left or top selection: category chips. Subcategory chips appear when a parent is selected.
+- Search bar filters the current result set on the client. No server search.
+- Result grid of ProductCard.
+- Empty state: “沒有符合的產品” + clear filters.
+- Query string optional: ?q= & ?category= for shareable filters.
+
+Category / subcategory
+- Same grid, heading from category i18n, optional intro from categories.json.
+
+Product detail
+- Image gallery (and video if present).
+- Name, SKU, unique-piece note. Never a price.
+- Summary + description.
+- Primary CTA: WhatsApp 預約查詢／訂購.
+- Secondary: back to category.
+- Sold: badge, CTA becomes “已售出，查詢類似款式”.
+
+Blog
+- File-driven from content/blog. New categories are JSON + a folder, not new route code.
+- v1 categories: story (水晶結緣故事), cases (案例分享).
+- Empty category: empty state, not fake stories.
+
+Others
+- Index of partner cards.
+- Detail: name, summary, description, WhatsApp note.
+
+Contact / 查詢／訂購
+- Heading: 查詢／訂購.
+- WhatsApp number, tap-to-chat to book an appointment or order.
+- Optional short hours/address if supplied.
+- No contact form and no price list in v1.
+
+404
+- Brand mark, short message, links: Home, Products, Contact.
+
+
+============================================================
+7. Navigation and chrome
+============================================================
+
+Navbar (shared)
+- Logo → home
+- 產品 / Products
+- 故事 / Story
+- 案例 / Cases
+- 合作 / Others
+- 查詢／訂購 / Contact
+- Language switcher: 繁 | 简 | EN  (same URL; writes cookie + localStorage and re-renders copy)
+- Mobile: hamburger + same links
+- Sticky, translucent over hero, solid after scroll
+
+Footer (shared)
+- Logo, short line, nav repeat, WhatsApp, language switcher
+- © JOKAngel Crystal
+
+WhatsApp
+- Floating button on all pages, hidden if it collides with the contact page CTA.
+
+
+============================================================
+8. Component inventory (build these first)
+============================================================
+
+Layout
+- AppShell (navbar + main + footer + floating WhatsApp)
+- Navbar
+- Footer
+- Container
+- Section
+- LocaleProvider (cookie + localStorage, default zh-Hant)
+- LanguageSwitcher
+- WhatsAppButton
+
+Content display
+- Hero
+- RichText (for MD)
+- CertificationRow
+- EmptyState
+- PageHeader
+
+Catalog
+- SearchBar
+- CategorySelect (the “selection screen”)
+- ProductGrid
+- ProductCard
+- ProductGallery
+- StatusBadge (published / sold / inquiry)
+- Do not build a PriceTag.
+
+Partners / blog
+- PartnerCard
+- ArticleCard
+- ArticleBody
+
+Feedback / motion
+- FadeIn (shared scroll/enter animation wrapper)
+- MobileNav
+
+Do not start page composition until these exist. Pages should mostly assemble the list above.
+
+
+============================================================
+9. Visual system
+============================================================
+
+Taken from current logos (deep violet field, champagne gold linework, winged crystal).
+
+Color
+- bg:        #1A1033
+- bg-elev:   #241544
+- surface:   #2E1B55
+- gold:      #E4C48A
+- gold-dim:  #C4A46A
+- text:      #F6F1E8
+- text-dim:  #C9C1D4
+- accent:    #B7A4E8  (amethyst highlight, sparingly)
+
+Type
+- Display: a refined serif for the wordmark and section titles.
+- Body: a clean grotesque that supports Traditional Chinese, Simplified Chinese, and English.
+- Suggested pairing to evaluate: "Noto Serif TC" + "Noto Sans TC" (covers all three locales).
+
+Motion
+- Short, quiet: 200–400ms fades and small Y translates on section enter.
+- Product cards: lift + gold border on hover.
+- No looping sparkle, no parallax overload, no auto-playing sound.
+
+Assets
+- Copy needed images into public/images/... with stable names (cinnabar/z001.jpg), not UUIDs.
+- Prefer the clean wordmark (JOKAngel + crystal + wings) in the navbar.
+- Seal/badge logo is fine for hero or footer, after watermark removal or replacement.
+
+
+============================================================
+10. i18n (cookie) and GitHub Pages notes
+============================================================
+
+Why cookie, not routes
+- Static GitHub Pages has no server to read a cookie and render a locale.
+- Locale prefixes would triple every static path and break the “one URL per product” share link.
+- Cookie + client provider keeps /products/cinnabar/z001-raw-cinnabar/ stable.
+
+Storage
+- Cookie name: jokangel_locale
+- Values: zh-Hant | zh-Hans | en
+- Default: zh-Hant
+- Attributes: Path=/; Max-Age=34560000; SameSite=Lax
+- Backup: localStorage.jokangel_locale (same values)
+- Read order: cookie → localStorage → zh-Hant
+- Write the cookie only when the visitor picks a language. Do not set it on first paint of the default.
+- Do not auto-detect browser language.
+
+Anti-FOUC
+- Static HTML is generated in zh-Hant.
+- Put a tiny blocking script in <head> that reads the cookie/localStorage, sets document.documentElement.lang and data-locale, and adds a class (e.g. locale-ready) so the first painted strings match the saved locale after hydration.
+- LocaleProvider hydrates from the same source. LanguageSwitcher updates cookie, localStorage, lang, and React state. No navigation.
+
+Optional one-shot
+- ?lang=en (or zh-Hans / zh-Hant) may write the cookie then drop the query. This is for a shared “open in English” link, not the primary mechanism.
+
+Content split
+- Dictionaries in content/i18n cover chrome only.
+- Product/category/blog strings stay in their own files and are selected by the active locale on the client.
+
+Tradeoff
+- EN and zh-Hans are not separate crawlable URLs. Acceptable for a catalog-plus-WhatsApp site. If SEO for English later matters, add hreflang or a route mode then — do not mix both in v1.
+
+GitHub Pages
+- Static export: no ISR, no middleware, no server actions.
+- Deploy the out/ folder. Add .nojekyll.
+- If the repo is project-pages (not a user/org site), set basePath and assetPrefix.
+
+
+============================================================
+11. Build order
+============================================================
+
+1. Next.js static-export skeleton, cookie LocaleProvider, 404, AppShell.
+2. Content schemas + sample files for one cinnabar product and one partner.
+3. Shared components in section 8.
+4. Home, products, product detail, contact.
+5. Others + blog stubs.
+6. Copy real images into public/, hide empty categories.
+7. Motion pass and mobile pass.
+8. GitHub Pages deploy check (basePath, trailingSlash, cookie persistence, no-FOUC language switch).
+
+Phase 2 (after v1 is live)
+- Cursor skills that add/update categories, products, blog articles, partners, navbar labels, and featured ids by editing /content and copying images. Skills must validate schema and must not add a public price field.
+
+
+============================================================
+12. Still required from the owner
+============================================================
+
+Must have before calling the site finished
+- Company about copy (zh-Hant at minimum).
+- Which distinct pieces 天鐵 / 舒俱萊 / 金運石 folders contain (one showcase item vs many).
+- Featured product ids.
+- Legal shop name if different from JOKAngel Crystal.
+- GitHub Pages target (user site vs project site / repo name).
+
+Nice to have
+- Story body and at least one real case. Further blog categories later via JSON.
+- Address, opening hours, Instagram / Facebook / Xiaohongshu.
+- Partner descriptions and whether each should show a third-party contact.
+- Clean logo files without 豆包AI生成 watermark.
+
+Until those arrive, implementation may use the schemas and seed products in this file. Prices stay out of the product files and off the page.

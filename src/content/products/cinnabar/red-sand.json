@@ -1,0 +1,19 @@
+{
+  "id": "red-sand",
+  "slug": "red-sand-cinnabar",
+  "sku": "RED-SAND",
+  "category": "cinnabar",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "紅砂", "zh-Hans": "红砂", "en": "Red Cinnabar" },
+  "summary": { "zh-Hant": "紅砂，獨一無二。", "zh-Hans": "红砂，独一无二。", "en": "A unique red cinnabar piece." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["cinnabar/red-sand.jpg", "cinnabar/red-sand-b.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢紅砂。",
+    "zh-Hans": "你好，我想预约查询红砂。",
+    "en": "Hello, I would like to book a viewing for the red cinnabar."
+  }
+}

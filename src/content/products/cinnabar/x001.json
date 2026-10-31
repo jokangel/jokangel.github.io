@@ -1,0 +1,19 @@
+{
+  "id": "x001",
+  "slug": "x001-cinnabar",
+  "sku": "X001",
+  "category": "cinnabar",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "朱砂", "zh-Hans": "朱砂", "en": "Cinnabar" },
+  "summary": { "zh-Hant": "朱砂作品，獨一無二。", "zh-Hans": "朱砂作品，独一无二。", "en": "A unique cinnabar piece." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["cinnabar/x001.jpg", "cinnabar/x001-b.jpg", "cinnabar/x001-c.jpg"],
+  "videos": [],
+  "featured": true,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢朱砂 X001。",
+    "zh-Hans": "你好，我想预约查询朱砂 X001。",
+    "en": "Hello, I would like to book a viewing for cinnabar X001."
+  }
+}

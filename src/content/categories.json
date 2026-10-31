@@ -1,0 +1,132 @@
+[
+  {
+    "id": "crystals",
+    "parent": null,
+    "visible": true,
+    "landingOnly": true,
+    "name": { "zh-Hant": "水晶", "zh-Hans": "水晶", "en": "Crystals" },
+    "intro": { "zh-Hant": "按品種挑選水晶。", "zh-Hans": "按品种挑选水晶。", "en": "Browse crystals by variety." }
+  },
+  {
+    "id": "gold-rutile",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "金髮晶、金鈦晶", "zh-Hans": "金发晶、金钛晶", "en": "Gold rutile / gold titanium" },
+    "theme": { "zh-Hant": "財運", "zh-Hans": "财运", "en": "Wealth" },
+    "intro": { "zh-Hant": "金髮晶、金鈦晶。", "zh-Hans": "金发晶、金钛晶。", "en": "Gold rutile and gold titanium quartz." }
+  },
+  {
+    "id": "black-rutile",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "黑、銅髮晶", "zh-Hans": "黑、铜发晶", "en": "Black / copper rutile" },
+    "theme": { "zh-Hant": "財運", "zh-Hans": "财运", "en": "Wealth" },
+    "intro": { "zh-Hant": "黑髮晶、銅髮晶。", "zh-Hans": "黑发晶、铜发晶。", "en": "Black and copper rutile quartz." }
+  },
+  {
+    "id": "pyrite",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "金運石", "zh-Hans": "金运石", "en": "Pyrite" },
+    "theme": { "zh-Hant": "財運、人緣", "zh-Hans": "财运、人缘", "en": "Wealth, relationships" },
+    "intro": { "zh-Hant": "金運石手串。", "zh-Hans": "金运石手串。", "en": "Pyrite bracelets." }
+  },
+  {
+    "id": "obsidian",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "金、銀、黑曜石", "zh-Hans": "金、银、黑曜石", "en": "Gold / silver / black obsidian" },
+    "theme": { "zh-Hant": "防小人", "zh-Hans": "防小人", "en": "Protection" },
+    "intro": { "zh-Hant": "金曜石、銀曜石、黑曜石。", "zh-Hans": "金曜石、银曜石、黑曜石。", "en": "Gold, silver, and black obsidian." }
+  },
+  {
+    "id": "green-phantom",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "綠幽靈、綠碧髮", "zh-Hans": "绿幽灵、绿碧发", "en": "Green phantom / green rutile" },
+    "theme": { "zh-Hant": "工作運", "zh-Hans": "工作运", "en": "Career" },
+    "intro": { "zh-Hant": "綠幽靈、綠碧髮。", "zh-Hans": "绿幽灵、绿碧发。", "en": "Green phantom and green rutile." }
+  },
+  {
+    "id": "tourmaline",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "碧璽", "zh-Hans": "碧玺", "en": "Tourmaline" },
+    "theme": { "zh-Hant": "全能", "zh-Hans": "全能", "en": "All-purpose" },
+    "intro": { "zh-Hant": "碧璽。", "zh-Hans": "碧玺。", "en": "Tourmaline." }
+  },
+  {
+    "id": "super-seven",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "超七", "zh-Hans": "超七", "en": "Super seven" },
+    "theme": { "zh-Hant": "全能", "zh-Hans": "全能", "en": "All-purpose" },
+    "intro": { "zh-Hant": "超七。", "zh-Hans": "超七。", "en": "Super seven." }
+  },
+  {
+    "id": "sugilite",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "舒俱萊", "zh-Hans": "舒俱来", "en": "Sugilite" },
+    "theme": { "zh-Hant": "健康之石", "zh-Hans": "健康之石", "en": "Health" },
+    "intro": { "zh-Hant": "舒俱萊手串。", "zh-Hans": "舒俱来手串。", "en": "Sugilite bracelets." }
+  },
+  {
+    "id": "sunstone",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "金太陽", "zh-Hans": "金太阳", "en": "Sunstone" },
+    "theme": { "zh-Hant": "人緣", "zh-Hans": "人缘", "en": "Relationships" },
+    "intro": { "zh-Hant": "金太陽。", "zh-Hans": "金太阳。", "en": "Sunstone." }
+  },
+  {
+    "id": "strawberry-quartz",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "草莓晶", "zh-Hans": "草莓晶", "en": "Strawberry quartz" },
+    "theme": { "zh-Hant": "人緣", "zh-Hans": "人缘", "en": "Relationships" },
+    "intro": { "zh-Hant": "草莓晶。", "zh-Hans": "草莓晶。", "en": "Strawberry quartz." }
+  },
+  {
+    "id": "other-crystals",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "其他", "zh-Hans": "其他", "en": "Others" },
+    "intro": { "zh-Hant": "其他水晶。", "zh-Hans": "其他水晶。", "en": "Other crystals." }
+  },
+  {
+    "id": "amethyst-geode",
+    "parent": "crystals",
+    "visible": true,
+    "name": { "zh-Hant": "紫晶洞", "zh-Hans": "紫晶洞", "en": "Amethyst geode" },
+    "intro": { "zh-Hant": "紫晶洞。", "zh-Hans": "紫晶洞。", "en": "Amethyst geodes." }
+  },
+  {
+    "id": "amber",
+    "parent": null,
+    "visible": true,
+    "name": { "zh-Hant": "琥珀", "zh-Hans": "琥珀", "en": "Amber" },
+    "intro": { "zh-Hant": "琥珀與蜜蠟。", "zh-Hans": "琥珀与蜜蜡。", "en": "Amber." }
+  },
+  {
+    "id": "agarwood",
+    "parent": null,
+    "visible": true,
+    "name": { "zh-Hant": "沉香", "zh-Hans": "沉香", "en": "Agarwood" },
+    "intro": { "zh-Hant": "沉香。", "zh-Hans": "沉香。", "en": "Agarwood." }
+  },
+  {
+    "id": "cinnabar",
+    "parent": null,
+    "visible": true,
+    "name": { "zh-Hant": "朱砂", "zh-Hans": "朱砂", "en": "Cinnabar" },
+    "intro": { "zh-Hant": "原礦與成品朱砂，歡迎預約睇貨。", "zh-Hans": "原矿与成品朱砂，欢迎预约看货。", "en": "Raw and finished cinnabar. Book a viewing." }
+  },
+  {
+    "id": "meteorite",
+    "parent": null,
+    "visible": true,
+    "name": { "zh-Hant": "天鐵", "zh-Hans": "天铁", "en": "Meteorite" },
+    "intro": { "zh-Hant": "天鐵飾品，每件獨一無二。", "zh-Hans": "天铁饰品，每件独一无二。", "en": "Meteorite pieces. Each one is unique." }
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "brand": "JOKAngel Crystal",
+  "whatsapp": "85268888464",
+  "featured": ["z001", "x001", "b001", "m001"],
+  "heroLine": {
+    "zh-Hant": "香港水晶與配飾。每件獨一無二，歡迎預約親身睇貨。",
+    "zh-Hans": "香港水晶与配饰。每件独一无二，欢迎预约亲身看货。",
+    "en": "Hong Kong crystals and accessories. Each piece is unique. Book a viewing."
+  },
+  "about": {
+    "zh-Hant": "JOKAngel Crystal 是香港水晶與配飾品牌。每件作品獨一無二，歡迎透過 WhatsApp 預約查詢或訂購。",
+    "zh-Hans": "JOKAngel Crystal 是香港水晶与配饰品牌。每件作品独一无二，欢迎通过 WhatsApp 预约查询或订购。",
+    "en": "JOKAngel Crystal is a Hong Kong crystals and accessories house. Every piece is unique. Enquire or book an appointment on WhatsApp."
+  }
+}

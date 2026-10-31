@@ -1,0 +1,12 @@
+[
+  {
+    "id": "story",
+    "name": { "zh-Hant": "水晶結緣故事", "zh-Hans": "水晶结缘故事", "en": "Crystal Stories" },
+    "intro": { "zh-Hant": "人與水晶相遇的故事。", "zh-Hans": "人与水晶相遇的故事。", "en": "Stories of people and crystals." }
+  },
+  {
+    "id": "cases",
+    "name": { "zh-Hant": "案例分享", "zh-Hans": "案例分享", "en": "Case Stories" },
+    "intro": { "zh-Hant": "真實選購與配戴分享。", "zh-Hans": "真实选购与配戴分享。", "en": "Real selection and wearing notes." }
+  }
+]

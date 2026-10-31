@@ -1,0 +1,19 @@
+{
+  "id": "m001",
+  "slug": "m001-meteorite-bracelet",
+  "sku": "M001",
+  "category": "meteorite",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "天鐵手串", "zh-Hans": "天铁手串", "en": "Meteorite Bracelet" },
+  "summary": { "zh-Hant": "天鐵珠手串。", "zh-Hans": "天铁珠手串。", "en": "A meteorite bead bracelet." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["meteorite/m001.jpg", "meteorite/m001-b.jpg"],
+  "videos": [],
+  "featured": true,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢天鐵手串 M001。",
+    "zh-Hans": "你好，我想预约查询天铁手串 M001。",
+    "en": "Hello, I would like to book a viewing for meteorite bracelet M001."
+  }
+}

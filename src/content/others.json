@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "tours",
+    "name": { "zh-Hant": "旅遊團 — 全國包小團", "zh-Hans": "旅游团 — 全国包小团", "en": "Small-group tours" },
+    "summary": { "zh-Hant": "全國包小團旅遊。", "zh-Hans": "全国包小团旅游。", "en": "Nationwide small-group tours." },
+    "description": { "zh-Hant": "合作伙伴服務。歡迎 WhatsApp 查詢轉介。", "zh-Hans": "合作伙伴服务。欢迎 WhatsApp 查询转介。", "en": "A partner service. Enquire on WhatsApp for a referral." },
+    "image": null,
+    "contactNote": { "zh-Hant": "歡迎 WhatsApp 查詢轉介。", "zh-Hans": "欢迎 WhatsApp 查询转介。", "en": "WhatsApp us for a referral." }
+  },
+  {
+    "slug": "recruitment",
+    "name": { "zh-Hant": "僱傭公司", "zh-Hans": "雇佣公司", "en": "Domestic helper agency" },
+    "summary": { "zh-Hant": "僱傭介紹服務。", "zh-Hans": "雇佣介绍服务。", "en": "Helper placement services." },
+    "description": { "zh-Hant": "合作伙伴服務。歡迎 WhatsApp 查詢轉介。", "zh-Hans": "合作伙伴服务。欢迎 WhatsApp 查询转介。", "en": "A partner service. Enquire on WhatsApp for a referral." },
+    "image": null,
+    "contactNote": { "zh-Hant": "歡迎 WhatsApp 查詢轉介。", "zh-Hans": "欢迎 WhatsApp 查询转介。", "en": "WhatsApp us for a referral." }
+  },
+  {
+    "slug": "home-living",
+    "name": { "zh-Hant": "裝修連智能家居＋空氣水質淨化服務", "zh-Hans": "装修连智能家居＋空气水质净化服务", "en": "Renovation, smart home, air and water" },
+    "summary": { "zh-Hant": "裝修、智能家居、空氣與水質淨化。", "zh-Hans": "装修、智能家居、空气与水质净化。", "en": "Renovation, smart home, air and water purification." },
+    "description": { "zh-Hant": "合作伙伴服務。歡迎 WhatsApp 查詢轉介。", "zh-Hans": "合作伙伴服务。欢迎 WhatsApp 查询转介。", "en": "A partner service. Enquire on WhatsApp for a referral." },
+    "image": null,
+    "contactNote": { "zh-Hant": "歡迎 WhatsApp 查詢轉介。", "zh-Hans": "欢迎 WhatsApp 查询转介。", "en": "WhatsApp us for a referral." }
+  },
+  {
+    "slug": "tuition",
+    "name": { "zh-Hant": "私補／鋼琴", "zh-Hans": "私补／钢琴", "en": "Private tuition / piano" },
+    "summary": { "zh-Hant": "私人補習與鋼琴。", "zh-Hans": "私人补习与钢琴。", "en": "Private tutoring and piano." },
+    "description": { "zh-Hant": "合作伙伴服務。歡迎 WhatsApp 查詢轉介。", "zh-Hans": "合作伙伴服务。欢迎 WhatsApp 查询转介。", "en": "A partner service. Enquire on WhatsApp for a referral." },
+    "image": null,
+    "contactNote": { "zh-Hant": "歡迎 WhatsApp 查詢轉介。", "zh-Hans": "欢迎 WhatsApp 查询转介。", "en": "WhatsApp us for a referral." }
+  },
+  {
+    "slug": "web-design",
+    "name": { "zh-Hant": "網站設計", "zh-Hans": "网站设计", "en": "Web design" },
+    "summary": { "zh-Hant": "網站設計服務。", "zh-Hans": "网站设计服务。", "en": "Website design services." },
+    "description": { "zh-Hant": "合作伙伴服務。歡迎 WhatsApp 查詢轉介。", "zh-Hans": "合作伙伴服务。欢迎 WhatsApp 查询转介。", "en": "A partner service. Enquire on WhatsApp for a referral." },
+    "image": null,
+    "contactNote": { "zh-Hant": "歡迎 WhatsApp 查詢轉介。", "zh-Hans": "欢迎 WhatsApp 查询转介。", "en": "WhatsApp us for a referral." }
+  },
+  {
+    "slug": "health",
+    "name": { "zh-Hant": "健康諮詢", "zh-Hans": "健康咨询", "en": "Health consultation" },
+    "summary": { "zh-Hant": "減肥、濕疹、三高、痛症。", "zh-Hans": "减肥、湿疹、三高、痛症。", "en": "Weight, eczema, blood pressure, pain." },
+    "description": { "zh-Hant": "合作伙伴服務。歡迎 WhatsApp 查詢轉介。", "zh-Hans": "合作伙伴服务。欢迎 WhatsApp 查询转介。", "en": "A partner service. Enquire on WhatsApp for a referral." },
+    "image": null,
+    "contactNote": { "zh-Hant": "歡迎 WhatsApp 查詢轉介。", "zh-Hans": "欢迎 WhatsApp 查询转介。", "en": "WhatsApp us for a referral." }
+  },
+  {
+    "slug": "classroom",
+    "name": { "zh-Hant": "租借課室", "zh-Hans": "租借课室", "en": "Classroom rental" },
+    "summary": { "zh-Hant": "課室租借。", "zh-Hans": "课室租借。", "en": "Classroom hire." },
+    "description": { "zh-Hant": "合作伙伴服務。歡迎 WhatsApp 查詢轉介。", "zh-Hans": "合作伙伴服务。欢迎 WhatsApp 查询转介。", "en": "A partner service. Enquire on WhatsApp for a referral." },
+    "image": null,
+    "contactNote": { "zh-Hant": "歡迎 WhatsApp 查詢轉介。", "zh-Hans": "欢迎 WhatsApp 查询转介。", "en": "WhatsApp us for a referral." }
+  }
+]
