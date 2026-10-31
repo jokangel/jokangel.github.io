@@ -1,0 +1,19 @@
+{
+  "id": "cinnabar-peace-buckle",
+  "slug": "cinnabar-peace-buckle",
+  "sku": "cinnabar-peace-buckle",
+  "category": "cinnabar",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "朱砂平安扣", "zh-Hans": "朱砂平安扣", "en": "Cinnabar Peace Buckle" },
+  "summary": { "zh-Hant": "朱砂平安扣吊墜。", "zh-Hans": "朱砂平安扣吊坠。", "en": "Cinnabar peace-buckle pendants." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["cinnabar/peace-buckle.jpg", "cinnabar/peace-buckle-b.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢朱砂平安扣。",
+    "zh-Hans": "你好，我想预约查询朱砂平安扣。",
+    "en": "Hello, I would like to book a viewing for the cinnabar peace buckle."
+  }
+}

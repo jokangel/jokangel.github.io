@@ -1,0 +1,19 @@
+{
+  "id": "sugilite-bar",
+  "slug": "sugilite-bar-bracelet",
+  "sku": "sugilite-bar",
+  "category": "sugilite",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "紫藍舒俱萊手排", "zh-Hans": "紫蓝舒俱莱手排", "en": "Purple-Blue Sugilite Bracelet" },
+  "summary": { "zh-Hant": "紫藍舒俱萊手排。", "zh-Hans": "紫蓝舒俱莱手排。", "en": "A purple-blue sugilite bar bracelet." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["sugilite/bar.jpg", "sugilite/bar-b.jpg"],
+  "videos": [],
+  "featured": true,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢紫藍舒俱萊手排。",
+    "zh-Hans": "你好，我想预约查询紫蓝舒俱莱手排。",
+    "en": "Hello, I would like to book a viewing for the purple-blue sugilite bracelet."
+  }
+}

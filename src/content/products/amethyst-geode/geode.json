@@ -1,0 +1,19 @@
+{
+  "id": "amethyst-geode",
+  "slug": "amethyst-geode",
+  "sku": "amethyst-geode",
+  "category": "amethyst-geode",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "紫晶洞", "zh-Hans": "紫晶洞", "en": "Amethyst Geode" },
+  "summary": { "zh-Hant": "紫晶洞擺件。", "zh-Hans": "紫晶洞摆件。", "en": "An amethyst geode display piece." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["amethyst-geode/geode.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢紫晶洞。",
+    "zh-Hans": "你好，我想预约查询紫晶洞。",
+    "en": "Hello, I would like to book a viewing for the amethyst geode."
+  }
+}

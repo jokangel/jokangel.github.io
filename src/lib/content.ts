@@ -3,8 +3,11 @@ import comingSoonCase from "@/content/blog/cases/coming-soon.json";
 import storyIndex from "@/content/blog/story/index.json";
 import categoriesJson from "@/content/categories.json";
 import othersJson from "@/content/others.json";
+import amethystGeode from "@/content/products/amethyst-geode/geode.json";
+import copperRutile from "@/content/products/black-rutile/copper.json";
 import b001 from "@/content/products/cinnabar/b001.json";
 import crystalSand from "@/content/products/cinnabar/crystal-sand.json";
+import peaceBuckle from "@/content/products/cinnabar/peace-buckle.json";
 import redSand from "@/content/products/cinnabar/red-sand.json";
 import x001 from "@/content/products/cinnabar/x001.json";
 import x002 from "@/content/products/cinnabar/x002.json";
@@ -12,9 +15,12 @@ import z001 from "@/content/products/cinnabar/z001.json";
 import z002 from "@/content/products/cinnabar/z002.json";
 import z003 from "@/content/products/cinnabar/z003.json";
 import m001 from "@/content/products/meteorite/m001.json";
+import k2Jasper from "@/content/products/other-crystals/k2.json";
 import p001 from "@/content/products/pyrite/p001.json";
 import p002 from "@/content/products/pyrite/p002.json";
+import sugiliteBar from "@/content/products/sugilite/bar.json";
 import s001 from "@/content/products/sugilite/s001.json";
+import tourmalineRainbow from "@/content/products/tourmaline/rainbow.json";
 import siteJson from "@/content/site.json";
 import type { Article, BlogCategory, Category, Partner, Product, SiteContent } from "@/lib/types";
 
@@ -32,10 +38,16 @@ export const products = [
   b001,
   redSand,
   crystalSand,
+  peaceBuckle,
   m001,
   s001,
+  sugiliteBar,
   p001,
   p002,
+  tourmalineRainbow,
+  copperRutile,
+  k2Jasper,
+  amethystGeode,
 ] as Product[];
 
 export const articles = [storyIndex, comingSoonCase] as Article[];

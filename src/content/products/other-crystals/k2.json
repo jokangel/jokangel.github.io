@@ -1,0 +1,19 @@
+{
+  "id": "k2-jasper",
+  "slug": "k2-jasper-bracelet",
+  "sku": "k2-jasper",
+  "category": "other-crystals",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "K2碧玉手串", "zh-Hans": "K2碧玉手串", "en": "K2 Jasper Bracelet" },
+  "summary": { "zh-Hant": "K2碧玉圓珠手串。", "zh-Hans": "K2碧玉圆珠手串。", "en": "A K2 jasper bead bracelet." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["other-crystals/k2.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢K2碧玉手串。",
+    "zh-Hans": "你好，我想预约查询K2碧玉手串。",
+    "en": "Hello, I would like to book a viewing for the K2 jasper bracelet."
+  }
+}

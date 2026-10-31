@@ -1,0 +1,19 @@
+{
+  "id": "tourmaline-rainbow",
+  "slug": "rainbow-tourmaline-bracelet",
+  "sku": "tourmaline-rainbow",
+  "category": "tourmaline",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "糖果碧璽手串", "zh-Hans": "糖果碧玺手串", "en": "Rainbow Tourmaline Bracelet" },
+  "summary": { "zh-Hant": "多色碧璽圓珠手串。", "zh-Hans": "多色碧玺圆珠手串。", "en": "A mixed-colour tourmaline bead bracelet." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["tourmaline/rainbow.jpg", "tourmaline/rainbow-b.jpg", "tourmaline/rainbow-c.jpg"],
+  "videos": [],
+  "featured": true,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢糖果碧璽手串。",
+    "zh-Hans": "你好，我想预约查询糖果碧玺手串。",
+    "en": "Hello, I would like to book a viewing for the rainbow tourmaline bracelet."
+  }
+}

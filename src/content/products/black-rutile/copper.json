@@ -1,0 +1,19 @@
+{
+  "id": "copper-rutile",
+  "slug": "copper-rutile-bracelet",
+  "sku": "copper-rutile",
+  "category": "black-rutile",
+  "subcategory": null,
+  "status": "published",
+  "name": { "zh-Hant": "銅髮晶圓珠手串", "zh-Hans": "铜发晶圆珠手串", "en": "Copper Rutile Bracelet" },
+  "summary": { "zh-Hant": "銅髮晶圓珠手串。", "zh-Hans": "铜发晶圆珠手串。", "en": "A copper rutile bead bracelet." },
+  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "images": ["black-rutile/copper.jpg", "black-rutile/copper-b.jpg", "black-rutile/copper-c.jpg"],
+  "videos": [],
+  "featured": false,
+  "whatsappPrefill": {
+    "zh-Hant": "你好，我想預約查詢銅髮晶圓珠手串。",
+    "zh-Hans": "你好，我想预约查询铜发晶圆珠手串。",
+    "en": "Hello, I would like to book a viewing for the copper rutile bracelet."
+  }
+}
