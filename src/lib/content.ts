@@ -1,4 +1,5 @@
 import blogCategoriesJson from "@/content/blog/categories.json";
+import comingSoonCase from "@/content/blog/cases/coming-soon.json";
 import storyIndex from "@/content/blog/story/index.json";
 import categoriesJson from "@/content/categories.json";
 import othersJson from "@/content/others.json";
@@ -37,7 +38,7 @@ export const products = [
   p002,
 ] as Product[];
 
-export const articles = [storyIndex] as Article[];
+export const articles = [storyIndex, comingSoonCase] as Article[];
 
 export function publishedProducts() {
   return products.filter((product) => product.status !== "hidden");

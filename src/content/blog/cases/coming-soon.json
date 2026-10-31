@@ -1,0 +1,11 @@
+{
+  "slug": "coming-soon",
+  "category": "cases",
+  "title": { "zh-Hant": "案例即將推出", "zh-Hans": "案例即将推出", "en": "Cases coming soon" },
+  "summary": { "zh-Hant": "案例分享即將推出。", "zh-Hans": "案例分享即将推出。", "en": "Case stories are coming soon." },
+  "body": {
+    "zh-Hant": "案例內容即將推出。歡迎先瀏覽作品，或透過 WhatsApp 預約查詢。",
+    "zh-Hans": "案例内容即将推出。欢迎先浏览作品，或通过 WhatsApp 预约查询。",
+    "en": "Case stories are coming soon. Browse the collection, or book a viewing on WhatsApp."
+  }
+}
