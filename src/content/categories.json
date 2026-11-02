@@ -99,7 +99,49 @@
     "parent": null,
     "visible": true,
     "name": { "zh-Hant": "紫晶洞", "zh-Hans": "紫晶洞", "en": "Amethyst geode" },
-    "intro": { "zh-Hant": "紫晶洞。", "zh-Hans": "紫晶洞。", "en": "Amethyst geodes." }
+    "intro": {
+      "zh-Hant": "紫晶洞本身具備強大的能量場，不但可以為其他水晶飾品消磁充電，它自身也需要定期淨化與保養。歡迎查詢！",
+      "zh-Hans": "紫晶洞本身具备强大的能量场，不但可以为其他水晶饰品消磁充电，它自身也需要定期净化与保养。欢迎查询！",
+      "en": "Amethyst geodes hold a strong energy field. They can cleanse and recharge other crystal pieces, and they also need regular purification and care. Enquiries welcome."
+    },
+    "howto": {
+      "title": {
+        "zh-Hant": "如何用紫晶洞幫其他水晶消磁？",
+        "zh-Hans": "如何用紫晶洞帮其他水晶消磁？",
+        "en": "How to cleanse other crystals with an amethyst geode"
+      },
+      "lead": {
+        "zh-Hant": "紫晶洞是極佳的「深層消磁充電法」工具，具備自動淨化與充電雙重效果：",
+        "zh-Hans": "紫晶洞是极佳的「深层消磁充电法」工具，具备自动净化与充电双重效果：",
+        "en": "An amethyst geode is an excellent tool for deep cleansing and charging, with both automatic purification and recharge:"
+      },
+      "steps": [
+        {
+          "title": { "zh-Hant": "放置方式", "zh-Hans": "放置方式", "en": "Placement" },
+          "text": {
+            "zh-Hant": "將需要消磁的手串、戒指或吊咀直接放入紫晶洞的洞穴內。大型擺件則可直接靠在晶洞旁。",
+            "zh-Hans": "将需要消磁的手串、戒指或吊坠直接放入紫晶洞的洞穴内。大型摆件则可直接靠在晶洞旁。",
+            "en": "Place bracelets, rings, or pendants that need cleansing inside the geode cavity. Larger display pieces can rest against the geode."
+          }
+        },
+        {
+          "title": { "zh-Hant": "靜置時間", "zh-Hans": "静置时间", "en": "Resting time" },
+          "text": {
+            "zh-Hant": "建議放置至少 4 小時以上，放過夜（約 10-12 小時）效果最佳。",
+            "zh-Hans": "建议放置至少 4 小时以上，放过夜（约 10-12 小时）效果最佳。",
+            "en": "Leave them for at least 4 hours. Overnight (about 10–12 hours) works best."
+          }
+        },
+        {
+          "title": { "zh-Hant": "適用對象", "zh-Hans": "适用对象", "en": "Suitable for" },
+          "text": {
+            "zh-Hant": "幾乎適用於各類天然水晶、手串與寶石。",
+            "zh-Hans": "几乎适用于各类天然水晶、手串与宝石。",
+            "en": "Suitable for almost all natural crystals, bracelets, and gemstones."
+          }
+        }
+      ]
+    }
   },
   {
     "id": "pendants",

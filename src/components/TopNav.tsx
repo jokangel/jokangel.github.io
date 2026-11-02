@@ -24,15 +24,15 @@ function useMenu() {
 function CrystalMenu({ onPick }: { onPick?: () => void }) {
   const { l } = useLocale();
   return (
-    <div className="grid min-w-[18rem] grid-cols-2 gap-1 rounded-2xl border border-gold/20 bg-bg-elev p-2 shadow-2xl shadow-black/40">
+    <div className="min-w-[16rem] space-y-0.5 rounded-2xl border border-gold/20 bg-bg-elev p-2 shadow-2xl shadow-black/40">
       {childCategories("crystals").map((child) => (
         <Link
           key={child.id}
           href={categoryPath(child)}
           onClick={onPick}
-          className="rounded-xl px-3 py-2 hover:bg-surface"
+          className="flex items-center whitespace-nowrap rounded-xl px-3 py-2 hover:bg-surface"
         >
-          <span className="block text-sm text-ink">{l(child.name)}</span>
+          <span className="text-sm text-ink">{l(child.name)}</span>
         </Link>
       ))}
     </div>

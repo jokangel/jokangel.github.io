@@ -20,6 +20,12 @@ export type Product = {
   whatsappPrefill: Localized;
 };
 
+export type CategoryHowto = {
+  title: Localized;
+  lead: Localized;
+  steps: { title: Localized; text: Localized }[];
+};
+
 export type Category = {
   id: string;
   parent: string | null;
@@ -28,6 +34,7 @@ export type Category = {
   name: Localized;
   theme?: Localized;
   intro: Localized;
+  howto?: CategoryHowto;
 };
 
 export type Partner = {

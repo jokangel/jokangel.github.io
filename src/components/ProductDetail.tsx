@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CategoryHowto } from "@/components/CategoryHowto";
 import { ProductGallery } from "@/components/ProductGallery";
 import { StatusBadge } from "@/components/StatusBadge";
 import { useLocale } from "@/components/LocaleProvider";
@@ -25,6 +26,11 @@ export function ProductDetail({ product }: { product: Product }) {
         </div>
         <p className="mt-5 text-muted">{t("product.unique")}</p>
         <p className="mt-4 leading-7 text-muted">{l(product.description)}</p>
+        {category?.howto ? (
+          <div className="mt-8">
+            <CategoryHowto howto={category.howto} />
+          </div>
+        ) : null}
         <div className="mt-8 flex flex-wrap gap-3">
           <WhatsAppButton
             message={product.whatsappPrefill}

@@ -6,8 +6,16 @@
   "subcategory": null,
   "status": "published",
   "name": { "zh-Hant": "紫晶洞", "zh-Hans": "紫晶洞", "en": "Amethyst Geode" },
-  "summary": { "zh-Hant": "紫晶洞擺件。", "zh-Hans": "紫晶洞摆件。", "en": "An amethyst geode display piece." },
-  "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
+  "summary": {
+    "zh-Hant": "紫晶洞本身具備強大的能量場，不但可以為其他水晶飾品消磁充電，它自身也需要定期淨化與保養。歡迎查詢！",
+    "zh-Hans": "紫晶洞本身具备强大的能量场，不但可以为其他水晶饰品消磁充电，它自身也需要定期净化与保养。欢迎查询！",
+    "en": "Amethyst geodes hold a strong energy field. They can cleanse and recharge other crystal pieces, and they also need regular purification and care. Enquiries welcome."
+  },
+  "description": {
+    "zh-Hant": "紫晶洞本身具備強大的能量場，不但可以為其他水晶飾品消磁充電，它自身也需要定期淨化與保養。歡迎查詢！",
+    "zh-Hans": "紫晶洞本身具备强大的能量场，不但可以为其他水晶饰品消磁充电，它自身也需要定期净化与保养。欢迎查询！",
+    "en": "Amethyst geodes hold a strong energy field. They can cleanse and recharge other crystal pieces, and they also need regular purification and care. Enquiries welcome."
+  },
   "images": ["amethyst-geode/geode.jpg"],
   "videos": [],
   "featured": false,
