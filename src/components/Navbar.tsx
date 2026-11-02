@@ -8,12 +8,13 @@ import { MobileNav } from "@/components/MobileNav";
 import { ShopNav } from "@/components/ShopNav";
 
 const extraLinks = [
-  { href: "/blog/story/", key: "nav.story" },
-  { href: "/blog/cases/", key: "nav.cases" },
+  { href: "/diy/", key: "nav.diy" },
   { href: "/cleansing/", key: "nav.cleansing" },
   { href: "/appraisal/", key: "nav.appraisal" },
-  { href: "/others/", key: "nav.others" },
+  { href: "/blog/story/", key: "nav.story" },
+  { href: "/blog/cases/", key: "nav.cases" },
   { href: "/contact/", key: "nav.contact" },
+  { href: "/others/", key: "nav.others" },
 ];
 
 export function Navbar() {
@@ -29,33 +30,35 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-40 border-b transition ${
-        solid ? "border-gold/15 bg-bg/90 backdrop-blur" : "border-transparent bg-bg/70 backdrop-blur"
-      }`}
-    >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-        <Link href="/" className="flex shrink-0 items-center gap-3">
-          <img src="/images/brand/wordmark.jpg" alt="JOKAngel Crystal" className="h-14 w-auto" />
-        </Link>
-        <nav className="hidden items-center gap-4 text-sm tracking-wide text-muted lg:flex">
-          <ShopNav />
-          {extraLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="transition hover:text-gold">
-              {t(link.key)}
-            </Link>
-          ))}
-          <LanguageSwitcher />
-        </nav>
-        <button
-          type="button"
-          className="text-sm text-gold lg:hidden"
-          onClick={() => setOpen(true)}
-        >
-          {t("nav.menu")}
-        </button>
-      </div>
+    <>
+      <header
+        className={`sticky top-0 z-40 border-b transition ${
+          solid ? "border-gold/15 bg-bg/90 backdrop-blur" : "border-transparent bg-bg/70 backdrop-blur"
+        }`}
+      >
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
+          <Link href="/" className="flex shrink-0 items-center gap-3">
+            <img src="/images/brand/wordmark.jpg" alt="JOKAngel Crystal" className="h-14 w-auto" />
+          </Link>
+          <nav className="hidden items-center gap-3 text-sm text-muted lg:flex">
+            <ShopNav />
+            {extraLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="transition hover:text-gold">
+                {t(link.key)}
+              </Link>
+            ))}
+            <LanguageSwitcher />
+          </nav>
+          <button
+            type="button"
+            className="text-sm text-gold lg:hidden"
+            onClick={() => setOpen(true)}
+          >
+            {t("nav.menu")}
+          </button>
+        </div>
+      </header>
       <MobileNav open={open} onClose={() => setOpen(false)} />
-    </header>
+    </>
   );
 }

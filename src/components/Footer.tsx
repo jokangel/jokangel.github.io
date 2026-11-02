@@ -6,12 +6,13 @@ import { useLocale } from "@/components/LocaleProvider";
 
 const links = [
   { href: "/products/", key: "nav.products" },
-  { href: "/blog/story/", key: "nav.story" },
-  { href: "/blog/cases/", key: "nav.cases" },
+  { href: "/diy/", key: "nav.diy" },
   { href: "/cleansing/", key: "nav.cleansing" },
   { href: "/appraisal/", key: "nav.appraisal" },
-  { href: "/others/", key: "nav.others" },
+  { href: "/blog/story/", key: "nav.story" },
+  { href: "/blog/cases/", key: "nav.cases" },
   { href: "/contact/", key: "nav.contact" },
+  { href: "/others/", key: "nav.others" },
 ];
 
 export function Footer() {
