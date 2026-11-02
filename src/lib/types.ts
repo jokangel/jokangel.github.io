@@ -53,6 +53,13 @@ export type BlogCategory = {
   intro: Localized;
 };
 
+export type EffectGroup = {
+  id: string;
+  name: Localized;
+  intro: Localized;
+  categories: string[];
+};
+
 export type SiteContent = {
   brand: string;
   whatsapp: string;

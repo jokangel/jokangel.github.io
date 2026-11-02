@@ -1,4 +1,5 @@
 import blogCategoriesJson from "@/content/blog/categories.json";
+import effectsJson from "@/content/effects.json";
 import comingSoonCase from "@/content/blog/cases/coming-soon.json";
 import storyIndex from "@/content/blog/story/index.json";
 import categoriesJson from "@/content/categories.json";
@@ -22,12 +23,13 @@ import sugiliteBar from "@/content/products/sugilite/bar.json";
 import s001 from "@/content/products/sugilite/s001.json";
 import tourmalineRainbow from "@/content/products/tourmaline/rainbow.json";
 import siteJson from "@/content/site.json";
-import type { Article, BlogCategory, Category, Partner, Product, SiteContent } from "@/lib/types";
+import type { Article, BlogCategory, Category, EffectGroup, Partner, Product, SiteContent } from "@/lib/types";
 
 export const site = siteJson as SiteContent;
 export const categories = categoriesJson as Category[];
 export const partners = othersJson as Partner[];
 export const blogCategories = blogCategoriesJson as BlogCategory[];
+export const effectGroups = effectsJson as EffectGroup[];
 
 export const products = [
   z001,
@@ -114,6 +116,20 @@ export function articleBySlug(category: string, slug: string) {
 
 export function blogCategoryById(id: string) {
   return blogCategories.find((category) => category.id === id);
+}
+
+export function effectById(id: string) {
+  return effectGroups.find((effect) => effect.id === id);
+}
+
+export function effectPath(effect: EffectGroup) {
+  return `/effects/${effect.id}/`;
+}
+
+export function categoriesForEffect(effect: EffectGroup) {
+  return effect.categories
+    .map((id) => categoryById(id))
+    .filter((category): category is Category => Boolean(category));
 }
 
 export function productPath(product: Product) {

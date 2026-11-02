@@ -3,17 +3,7 @@
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLocale } from "@/components/LocaleProvider";
-
-const links = [
-  { href: "/products/", key: "nav.products" },
-  { href: "/diy/", key: "nav.diy" },
-  { href: "/cleansing/", key: "nav.cleansing" },
-  { href: "/appraisal/", key: "nav.appraisal" },
-  { href: "/blog/story/", key: "nav.story" },
-  { href: "/blog/cases/", key: "nav.cases" },
-  { href: "/contact/", key: "nav.contact" },
-  { href: "/others/", key: "nav.others" },
-];
+import { topNav } from "@/lib/nav";
 
 export function Footer() {
   const { t } = useLocale();
@@ -26,7 +16,7 @@ export function Footer() {
           <p className="mt-2 text-sm text-muted">{t("footer.tag")}</p>
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted">
-          {links.map((link) => (
+          {topNav.map((link) => (
             <Link key={link.href} href={link.href} className="hover:text-gold">
               {t(link.key)}
             </Link>

@@ -96,17 +96,39 @@
   },
   {
     "id": "amethyst-geode",
-    "parent": "crystals",
+    "parent": null,
     "visible": true,
     "name": { "zh-Hant": "紫晶洞", "zh-Hans": "紫晶洞", "en": "Amethyst geode" },
     "intro": { "zh-Hant": "紫晶洞。", "zh-Hans": "紫晶洞。", "en": "Amethyst geodes." }
   },
   {
-    "id": "amber",
+    "id": "pendants",
     "parent": null,
     "visible": true,
+    "name": { "zh-Hant": "吊咀系列", "zh-Hans": "吊坠系列", "en": "Pendants" },
+    "intro": { "zh-Hant": "吊咀系列，歡迎預約睇貨。", "zh-Hans": "吊坠系列，欢迎预约看货。", "en": "Pendant pieces. Book a viewing." }
+  },
+  {
+    "id": "amber-beeswax",
+    "parent": null,
+    "visible": true,
+    "landingOnly": true,
+    "name": { "zh-Hant": "琥珀/蜜蠟", "zh-Hans": "琥珀/蜜蜡", "en": "Amber / Beeswax" },
+    "intro": { "zh-Hant": "琥珀與蜜蠟，歡迎預約睇貨。", "zh-Hans": "琥珀与蜜蜡，欢迎预约看货。", "en": "Amber and beeswax. Book a viewing." }
+  },
+  {
+    "id": "amber",
+    "parent": "amber-beeswax",
+    "visible": true,
     "name": { "zh-Hant": "琥珀", "zh-Hans": "琥珀", "en": "Amber" },
-    "intro": { "zh-Hant": "琥珀與蜜蠟。", "zh-Hans": "琥珀与蜜蜡。", "en": "Amber." }
+    "intro": { "zh-Hant": "琥珀，歡迎預約睇貨。", "zh-Hans": "琥珀，欢迎预约看货。", "en": "Amber. Book a viewing." }
+  },
+  {
+    "id": "beeswax",
+    "parent": "amber-beeswax",
+    "visible": true,
+    "name": { "zh-Hant": "蜜蠟", "zh-Hans": "蜜蜡", "en": "Beeswax" },
+    "intro": { "zh-Hant": "蜜蠟，歡迎預約睇貨。", "zh-Hans": "蜜蜡，欢迎预约看货。", "en": "Beeswax. Book a viewing." }
   },
   {
     "id": "agarwood",

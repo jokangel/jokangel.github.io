@@ -1,9 +1,10 @@
 "use client";
 
+import { CertificationRow } from "@/components/CertificationRow";
 import { Container } from "@/components/Container";
-import { EmptyState } from "@/components/EmptyState";
 import { PageHeader } from "@/components/PageHeader";
 import { Section } from "@/components/Section";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useLocale } from "@/components/LocaleProvider";
 
 export default function AppraisalPage() {
@@ -13,7 +14,11 @@ export default function AppraisalPage() {
     <Container>
       <Section>
         <PageHeader title={t("nav.appraisal")} />
-        <EmptyState title={t("blog.empty")} />
+        <p className="mb-8 max-w-2xl text-muted">{t("appraisal.lead")}</p>
+        <CertificationRow />
+        <div className="mt-10">
+          <WhatsAppButton label={t("nav.contact")} />
+        </div>
       </Section>
     </Container>
   );

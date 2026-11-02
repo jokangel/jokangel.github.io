@@ -5,17 +5,7 @@ import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLocale } from "@/components/LocaleProvider";
 import { MobileNav } from "@/components/MobileNav";
-import { ShopNav } from "@/components/ShopNav";
-
-const extraLinks = [
-  { href: "/diy/", key: "nav.diy" },
-  { href: "/cleansing/", key: "nav.cleansing" },
-  { href: "/appraisal/", key: "nav.appraisal" },
-  { href: "/blog/story/", key: "nav.story" },
-  { href: "/blog/cases/", key: "nav.cases" },
-  { href: "/contact/", key: "nav.contact" },
-  { href: "/others/", key: "nav.others" },
-];
+import { TopNav } from "@/components/TopNav";
 
 export function Navbar() {
   const { t } = useLocale();
@@ -36,26 +26,28 @@ export function Navbar() {
           solid ? "border-gold/15 bg-bg/90 backdrop-blur" : "border-transparent bg-bg/70 backdrop-blur"
         }`}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-          <Link href="/" className="flex shrink-0 items-center gap-3">
-            <img src="/images/brand/wordmark.jpg" alt="JOKAngel Crystal" className="h-14 w-auto" />
-          </Link>
-          <nav className="hidden items-center gap-3 text-sm text-muted lg:flex">
-            <ShopNav />
-            {extraLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="transition hover:text-gold">
-                {t(link.key)}
-              </Link>
-            ))}
-            <LanguageSwitcher />
-          </nav>
-          <button
-            type="button"
-            className="text-sm text-gold lg:hidden"
-            onClick={() => setOpen(true)}
-          >
-            {t("nav.menu")}
-          </button>
+        <div className="mx-auto max-w-7xl px-5 py-3">
+          <div className="flex items-center justify-between lg:hidden">
+            <Link href="/" className="flex shrink-0 items-center">
+              <img src="/images/brand/wordmark.jpg" alt="JOKAngel Crystal" className="h-14 w-auto" />
+            </Link>
+            <button
+              type="button"
+              className="text-sm text-gold"
+              onClick={() => setOpen(true)}
+            >
+              {t("nav.menu")}
+            </button>
+          </div>
+          <div className="hidden items-start lg:grid lg:grid-cols-[12rem_minmax(0,1fr)_12rem] lg:gap-x-4">
+            <Link href="/" className="justify-self-start">
+              <img src="/images/brand/wordmark.jpg" alt="JOKAngel Crystal" className="h-14 w-auto" />
+            </Link>
+            <TopNav className="flex min-w-0 flex-col justify-center gap-y-1.5 text-[13px] leading-6 text-muted" />
+            <div className="justify-self-end pt-1">
+              <LanguageSwitcher />
+            </div>
+          </div>
         </div>
       </header>
       <MobileNav open={open} onClose={() => setOpen(false)} />

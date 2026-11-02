@@ -1,19 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLocale } from "@/components/LocaleProvider";
-import { ShopNavMobile } from "@/components/ShopNav";
-
-const extraLinks = [
-  { href: "/diy/", key: "nav.diy" },
-  { href: "/cleansing/", key: "nav.cleansing" },
-  { href: "/appraisal/", key: "nav.appraisal" },
-  { href: "/blog/story/", key: "nav.story" },
-  { href: "/blog/cases/", key: "nav.cases" },
-  { href: "/contact/", key: "nav.contact" },
-  { href: "/others/", key: "nav.others" },
-];
+import { TopNavMobile } from "@/components/TopNav";
 
 export function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { t } = useLocale();
@@ -28,16 +17,7 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
           {t("nav.close")}
         </button>
       </div>
-      <nav className="space-y-8">
-        <ShopNavMobile onPick={onClose} />
-        <div className="flex flex-col gap-5 border-t border-gold/15 pt-8 text-xl">
-          {extraLinks.map((link) => (
-            <Link key={link.href} href={link.href} onClick={onClose} className="text-ink">
-              {t(link.key)}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <TopNavMobile onPick={onClose} />
       <div className="mt-12">
         <LanguageSwitcher />
       </div>

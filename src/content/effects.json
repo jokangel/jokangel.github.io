@@ -1,0 +1,74 @@
+[
+  {
+    "id": "all-purpose",
+    "name": { "zh-Hant": "全能、平衡", "zh-Hans": "全能、平衡", "en": "All-purpose, balance" },
+    "intro": { "zh-Hant": "全能、平衡。", "zh-Hans": "全能、平衡。", "en": "All-purpose and balance." },
+    "categories": ["tourmaline", "super-seven"]
+  },
+  {
+    "id": "wealth-career",
+    "name": { "zh-Hant": "招財、事業", "zh-Hans": "招财、事业", "en": "Wealth, career" },
+    "intro": { "zh-Hant": "招財、事業。", "zh-Hans": "招财、事业。", "en": "Wealth and career." },
+    "categories": ["gold-rutile", "black-rutile", "pyrite", "green-phantom"]
+  },
+  {
+    "id": "relationships",
+    "name": { "zh-Hant": "人緣、招貴人", "zh-Hans": "人缘、招贵人", "en": "Relationships, benefactors" },
+    "intro": { "zh-Hant": "人緣、招貴人。", "zh-Hans": "人缘、招贵人。", "en": "Relationships and benefactors." },
+    "categories": ["sunstone", "strawberry-quartz", "pyrite"]
+  },
+  {
+    "id": "protection",
+    "name": { "zh-Hant": "辟邪、防小人", "zh-Hans": "辟邪、防小人", "en": "Protection" },
+    "intro": { "zh-Hant": "辟邪、防小人。", "zh-Hans": "辟邪、防小人。", "en": "Protection." },
+    "categories": ["obsidian"]
+  },
+  {
+    "id": "health",
+    "name": { "zh-Hant": "健康、排除負能量", "zh-Hans": "健康、排除负能量", "en": "Health, clearing" },
+    "intro": { "zh-Hant": "健康、排除負能量。", "zh-Hans": "健康、排除负能量。", "en": "Health and clearing." },
+    "categories": ["sugilite"]
+  },
+  {
+    "id": "calm-sleep",
+    "name": { "zh-Hant": "穩定情緒、安睡", "zh-Hans": "稳定情绪、安睡", "en": "Calm, sleep" },
+    "intro": { "zh-Hant": "穩定情緒、安睡。", "zh-Hans": "稳定情绪、安睡。", "en": "Calm and sleep." },
+    "categories": []
+  },
+  {
+    "id": "confidence-study",
+    "name": { "zh-Hant": "自信、決策、學業", "zh-Hans": "自信、决策、学业", "en": "Confidence, study" },
+    "intro": { "zh-Hant": "自信、決策、學業。", "zh-Hans": "自信、决策、学业。", "en": "Confidence, decisions, and study." },
+    "categories": []
+  },
+  {
+    "id": "love",
+    "name": { "zh-Hant": "愛情、姻緣、人緣", "zh-Hans": "爱情、姻缘、人缘", "en": "Love, marriage" },
+    "intro": { "zh-Hant": "愛情、姻緣、人緣。", "zh-Hans": "爱情、姻缘、人缘。", "en": "Love, marriage, and relationships." },
+    "categories": ["sunstone", "strawberry-quartz"]
+  },
+  {
+    "id": "womens-wellness",
+    "name": { "zh-Hant": "女性調理", "zh-Hans": "女性调理", "en": "Women's wellness" },
+    "intro": { "zh-Hant": "女性調理。", "zh-Hans": "女性调理。", "en": "Women's wellness." },
+    "categories": []
+  },
+  {
+    "id": "colour",
+    "name": { "zh-Hant": "色系功能", "zh-Hans": "色系功能", "en": "Colour" },
+    "intro": { "zh-Hant": "色系功能。", "zh-Hans": "色系功能。", "en": "Colour." },
+    "categories": []
+  },
+  {
+    "id": "birthstone",
+    "name": { "zh-Hant": "生日之石", "zh-Hans": "生日之石", "en": "Birthstones" },
+    "intro": { "zh-Hant": "生日之石。", "zh-Hans": "生日之石。", "en": "Birthstones." },
+    "categories": []
+  },
+  {
+    "id": "home-peace",
+    "name": { "zh-Hant": "鎮宅、平安", "zh-Hans": "镇宅、平安", "en": "Home, peace" },
+    "intro": { "zh-Hant": "鎮宅、平安。", "zh-Hans": "镇宅、平安。", "en": "Home and peace." },
+    "categories": []
+  }
+]
