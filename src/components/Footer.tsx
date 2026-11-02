@@ -13,7 +13,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gold/15 bg-bg-elev">
-      <div className="mx-auto flex max-w-3xl flex-col gap-7 px-5 py-10 text-xs leading-6 text-muted">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 text-xs leading-6 text-muted md:grid-cols-3 md:gap-10">
         {notices.map((notice) => (
           <div key={notice.title}>
             <p className="mb-2 tracking-[0.18em] text-gold uppercase">{t(notice.title)}</p>
