@@ -8,6 +8,8 @@ import { ShopNavMobile } from "@/components/ShopNav";
 const extraLinks = [
   { href: "/blog/story/", key: "nav.story" },
   { href: "/blog/cases/", key: "nav.cases" },
+  { href: "/cleansing/", key: "nav.cleansing" },
+  { href: "/appraisal/", key: "nav.appraisal" },
   { href: "/others/", key: "nav.others" },
   { href: "/contact/", key: "nav.contact" },
 ];

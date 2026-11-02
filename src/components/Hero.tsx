@@ -38,7 +38,7 @@ export function Hero() {
         </div>
         <div className="justify-self-center">
           <img
-            src="/images/brand/wordmark.jpg"
+            src="/images/brand/emblem.jpg"
             alt="JOKAngel Crystal"
             className="w-full max-w-md rounded-[2rem] border border-gold/15 shadow-2xl shadow-black/40"
           />
