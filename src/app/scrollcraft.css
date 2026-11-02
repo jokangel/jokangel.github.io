@@ -1,0 +1,504 @@
+/* scroll-craft devices, retinted to the JOKAngel palette.
+   The engine in public/vendor/scrollcraft.js drives these attributes. */
+
+:root {
+  --sc-canvas: #1a1033;
+  --sc-surface: #241544;
+  --sc-ink: #f6f1e8;
+  --sc-ink-soft: #c9c1d4;
+  --sc-accent: #e4c48a;
+  --sc-accent-ink: #1a1033;
+  --sc-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --sc-ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --sc-d-slow: 420ms;
+  --sc-z-stage: 1;
+  --sc-z-copy: 20;
+  --sc-z-chrome: 60;
+  --sc-gutter: clamp(1.25rem, 5vw, 4rem);
+  --color-bg: var(--sc-canvas);
+}
+
+html {
+  overflow-x: clip;
+}
+
+[data-sc-progress] {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: 70;
+  background: var(--sc-accent);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+.sc-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0.05;
+}
+
+.sc-grain::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)'/></svg>");
+}
+
+.sc-act--pinned {
+  position: relative;
+}
+
+.sc-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: clip;
+}
+
+[data-sc-cue] {
+  opacity: 0;
+}
+
+.sc-split {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.sc-split--line {
+  display: block;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+.sc-split__i {
+  display: inline-block;
+}
+
+.sc-is-split {
+  opacity: 1 !important;
+}
+
+[data-sc-pan] {
+  display: flex;
+  will-change: transform;
+}
+
+[data-sc-tilt] {
+  transform-style: preserve-3d;
+}
+
+:where([data-sc-spotlight]) {
+  position: relative;
+}
+
+[data-sc-spotlight] {
+  isolation: isolate;
+}
+
+[data-sc-spotlight]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    22rem 22rem at calc(var(--sc-mx, 0.5) * 100%) calc(var(--sc-my, 0.5) * 100%),
+    color-mix(in oklab, var(--sc-accent) 28%, transparent),
+    transparent 68%
+  );
+  opacity: 0;
+  transition: opacity var(--sc-d-slow) var(--sc-ease-out);
+}
+
+[data-sc-spotlight]:hover::after {
+  opacity: 1;
+}
+
+html:not(.sc-ready) [data-sc-cue],
+html:not(.sc-ready) [data-sc-reveal] {
+  opacity: 1;
+  transform: none;
+  clip-path: none;
+}
+
+/* ---------------------------------------------------------------- hero -- */
+.hero-act {
+  position: relative;
+  border-bottom: 1px solid color-mix(in srgb, var(--sc-accent) 16%, transparent);
+}
+
+.hero-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.9fr);
+  align-items: center;
+  min-height: calc(100svh - 5.5rem);
+  column-gap: 2.5rem;
+  padding: 4.5rem var(--sc-gutter) 4rem;
+  overflow: clip;
+}
+
+.hero-atmo,
+.hero-fore {
+  position: absolute;
+  inset: -8%;
+  pointer-events: none;
+}
+
+.hero-atmo {
+  background:
+    radial-gradient(circle at 72% 38%, rgba(228, 196, 138, 0.2), transparent 26%),
+    radial-gradient(circle at 22% 78%, rgba(183, 164, 232, 0.28), transparent 34%);
+}
+
+.hero-fore span {
+  position: absolute;
+  width: min(46vw, 34rem);
+  height: min(46vw, 34rem);
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 32%, transparent);
+  border-radius: 50%;
+}
+
+.hero-fore span:first-child {
+  left: -16%;
+  bottom: -28%;
+}
+
+.hero-fore span:last-child {
+  right: -18%;
+  top: -24%;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 36rem;
+}
+
+.hero-kicker {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--sc-accent);
+}
+
+.hero-title {
+  font-size: clamp(3.2rem, 1.4rem + 5vw, 6rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.hero-title span {
+  display: block;
+  margin-top: 0.65rem;
+  font-size: 0.34em;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: #c4a46a;
+}
+
+.hero-lead {
+  max-width: 38ch;
+  margin-top: 1.5rem;
+  line-height: 1.7;
+  color: var(--sc-ink-soft);
+  text-wrap: pretty;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.hero-subject {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 30rem);
+  justify-self: center;
+}
+
+.hero-stone {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow:
+    0 2px 4px hsl(260 40% 2% / 0.24),
+    0 24px 50px -16px hsl(260 40% 2% / 0.55);
+}
+
+.hero-stone img {
+  width: 100%;
+  height: auto;
+}
+
+.facet-ring {
+  position: absolute;
+  inset: 7% 18%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.facet-ring path {
+  fill: none;
+  stroke: #f3e2bc;
+  stroke-width: 1.1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: calc(1 - var(--sc-p, 0));
+  filter: drop-shadow(0 0 6px rgba(228, 196, 138, 0.65));
+}
+
+/* --------------------------------------------------------------- about -- */
+.about-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 3rem;
+  padding: 6.5rem var(--sc-gutter) 3rem;
+}
+
+.about-kicker {
+  font-size: clamp(2rem, 1rem + 2vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.about-beats {
+  position: relative;
+  min-height: 11rem;
+  margin-top: 1.75rem;
+}
+
+.about-beats p {
+  max-width: 14em;
+  font-size: clamp(1.7rem, 1rem + 1.6vw, 2.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.sc-ready .about-beats [data-sc-cue] {
+  position: absolute;
+  inset: 0;
+}
+
+.about-certs .grid {
+  grid-template-columns: 1fr;
+}
+
+.about-certs img {
+  width: 100%;
+  height: 9.5rem;
+}
+
+@media (min-width: 1100px) {
+  .about-certs .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------------------------------------------------------------- rail -- */
+.rail-stage {
+  display: flex;
+  align-items: center;
+}
+
+.piece-rail {
+  gap: 1.25rem;
+  align-items: stretch;
+  padding-inline: var(--sc-gutter);
+}
+
+.piece-rail > * {
+  flex: 0 0 clamp(16rem, 28vw, 22rem);
+}
+
+.rail-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 24rem;
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  background:
+    linear-gradient(160deg, rgba(228, 196, 138, 0.14), transparent 46%),
+    #241544;
+}
+
+.rail-note h2,
+.rail-end {
+  font-size: clamp(2rem, 1rem + 2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.rail-end {
+  color: var(--sc-accent);
+}
+
+.rail-card {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #241544;
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 14%, transparent);
+}
+
+.rail-card img {
+  aspect-ratio: 1;
+  width: 100%;
+  max-height: 42vh;
+  object-fit: cover;
+}
+
+.rail-card div {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+
+.rail-card p {
+  margin-top: 0.35rem;
+  color: var(--sc-ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------- paths -- */
+.paths {
+  padding: clamp(4.5rem, 9vw, 8rem) var(--sc-gutter);
+}
+
+.paths-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 1rem;
+  max-width: 76rem;
+  margin-inline: auto;
+}
+
+.path-lead,
+.path-side a {
+  display: flex;
+  min-height: 14rem;
+  align-items: flex-end;
+  padding: 2rem;
+  border-radius: 1.75rem;
+  background: #241544;
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 16%, transparent);
+  transition: border-color 240ms var(--sc-ease-out);
+}
+
+.path-lead {
+  min-height: 32rem;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(228, 196, 138, 0.18), transparent 32%),
+    #241544;
+}
+
+.path-lead:hover,
+.path-side a:hover {
+  border-color: color-mix(in srgb, var(--sc-accent) 55%, transparent);
+}
+
+.path-lead h2,
+.path-side h3 {
+  font-size: clamp(2rem, 1rem + 2vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.path-side {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (max-width: 860px) {
+  .hero-stage,
+  .about-stage,
+  .paths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stage {
+    align-content: center;
+    min-height: calc(100svh - 4.75rem);
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    row-gap: 0.75rem;
+  }
+
+  .hero-subject {
+    order: -1;
+    width: min(62vw, 14.5rem);
+  }
+
+  .hero-lead {
+    margin-top: 0.85rem;
+  }
+
+  .hero-actions {
+    margin-top: 1.1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.7rem, 12vw, 3.6rem);
+  }
+
+  .about-stage {
+    align-content: center;
+    padding-top: 6rem;
+  }
+
+  .about-certs img {
+    height: 7.5rem;
+  }
+
+  .path-lead {
+    min-height: 18rem;
+  }
+
+  .sc-stage {
+    height: 100svh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-sc-parallax],
+  [data-sc-pan],
+  .sc-split__i {
+    transform: none !important;
+  }
+
+  [data-sc-reveal] {
+    clip-path: none !important;
+  }
+
+  [data-sc-act="pan"] [data-sc-stage] {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+  }
+
+  [data-sc-pan] > * {
+    scroll-snap-align: center;
+  }
+
+  [data-sc-spotlight]::after {
+    display: none;
+  }
+
+  .facet-ring path {
+    stroke-dashoffset: 0;
+  }
+}

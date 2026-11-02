@@ -12,7 +12,9 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={productPath(product)}
-      className="group overflow-hidden rounded-3xl border border-gold/10 bg-bg-elev transition hover:-translate-y-1 hover:border-gold/40"
+      data-sc-tilt="6"
+      data-sc-spotlight
+      className="group overflow-hidden rounded-3xl border border-gold/10 bg-bg-elev transition hover:border-gold/40"
     >
       <div className="aspect-[4/5] overflow-hidden bg-surface">
         {product.images[0] ? (

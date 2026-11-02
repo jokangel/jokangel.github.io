@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { Footer } from "@/components/Footer";
 import { LocaleProvider, useLocale } from "@/components/LocaleProvider";
 import { Navbar } from "@/components/Navbar";
+import { ScrollCraft } from "@/components/ScrollCraft";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 function Shell({ children }: { children: ReactNode }) {
@@ -13,6 +14,9 @@ function Shell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-bg">
+      <div data-sc-progress />
+      <div className="sc-grain" aria-hidden="true" />
+      <ScrollCraft />
       <Navbar />
       <main>{children}</main>
       <Footer />

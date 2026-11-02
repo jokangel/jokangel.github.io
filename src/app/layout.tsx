@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AppShell } from "@/components/AppShell";
 import { localeBootScript } from "@/lib/locale";
 import "./globals.css";
+import "./scrollcraft.css";
 
 export const metadata: Metadata = {
   title: "JOKAngel Crystal",

@@ -11,7 +11,7 @@ export function ProductGallery({ images, alt }: { images: string[]; alt: string 
 
   return (
     <div>
-      <div className="overflow-hidden rounded-[2rem] border border-gold/15 bg-surface">
+      <div className="overflow-hidden rounded-[2rem] border border-gold/15 bg-surface" data-sc-tilt="7" data-sc-spotlight>
         <img src={imageSrc(current)} alt={alt} className="aspect-square w-full object-cover" />
       </div>
       {images.length > 1 ? (
