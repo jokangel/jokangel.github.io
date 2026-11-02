@@ -33,6 +33,10 @@ export function Footer() {
         </nav>
         <LanguageSwitcher />
       </div>
+      <div className="mx-auto max-w-3xl px-5 pt-2 pb-8 text-xs leading-6 text-muted">
+        <p className="mb-2 tracking-[0.18em] text-gold uppercase">{t("notice.legalTitle")}</p>
+        <p>{t("notice.legal")}</p>
+      </div>
       <div className="border-t border-gold/10 py-5 text-center text-xs text-muted">
         © 2026 JOKAngel Crystal. {t("footer.rights")}
       </div>

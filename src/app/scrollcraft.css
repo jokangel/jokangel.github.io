@@ -241,22 +241,6 @@ html:not(.sc-ready) [data-sc-reveal] {
   height: auto;
 }
 
-.facet-ring {
-  position: absolute;
-  inset: 7% 18%;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.facet-ring path {
-  fill: none;
-  stroke: #f3e2bc;
-  stroke-width: 1.1;
-  stroke-dasharray: 1;
-  stroke-dashoffset: calc(1 - var(--sc-p, 0));
-  filter: drop-shadow(0 0 6px rgba(228, 196, 138, 0.65));
-}
-
 /* --------------------------------------------------------------- about -- */
 .about-stage {
   display: grid;
@@ -496,9 +480,5 @@ html:not(.sc-ready) [data-sc-reveal] {
 
   [data-sc-spotlight]::after {
     display: none;
-  }
-
-  .facet-ring path {
-    stroke-dashoffset: 0;
   }
 }

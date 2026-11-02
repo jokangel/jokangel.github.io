@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { LocaleProvider, useLocale } from "@/components/LocaleProvider";
 import { Navbar } from "@/components/Navbar";
 import { ScrollCraft } from "@/components/ScrollCraft";
+import { SiteNotice } from "@/components/SiteNotice";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 function Shell({ children }: { children: ReactNode }) {
@@ -18,6 +19,7 @@ function Shell({ children }: { children: ReactNode }) {
       <div className="sc-grain" aria-hidden="true" />
       <ScrollCraft />
       <Navbar />
+      <SiteNotice />
       <main>{children}</main>
       <Footer />
       {pathname !== "/contact/" && pathname !== "/contact" ? (

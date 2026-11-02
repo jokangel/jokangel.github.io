@@ -52,3 +52,43 @@ h3,
 .gold-line {
   background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
 }
+
+.notice-marquee {
+  overflow: hidden;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-gold) 15%, transparent);
+  background: color-mix(in srgb, var(--color-bg-elev) 80%, transparent);
+}
+
+.notice-track {
+  display: flex;
+  width: max-content;
+  animation: notice-ltr 36s linear infinite;
+}
+
+.notice-track span {
+  flex: none;
+  padding-inline: 2.5rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.04em;
+  color: var(--color-gold);
+}
+
+@keyframes notice-ltr {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notice-track {
+    width: 100%;
+    animation: none;
+    transform: none;
+    justify-content: center;
+  }
+}

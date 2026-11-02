@@ -39,9 +39,6 @@ export function HomeFilm() {
           <div className="hero-subject" data-sc-parallax="-0.45">
             <div className="hero-stone" data-sc-tilt="8" data-sc-spotlight>
               <img src="/images/brand/emblem.jpg" alt="JOKAngel Crystal" />
-              <svg className="facet-ring" viewBox="0 0 100 140" aria-hidden="true">
-                <path pathLength={1} d="M50 4 L82 36 L74 96 L50 136 L26 96 L18 36 Z" />
-              </svg>
             </div>
           </div>
           <div className="hero-fore" data-sc-parallax="0.85" aria-hidden="true">
