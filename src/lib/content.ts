@@ -23,7 +23,16 @@ import sugiliteBar from "@/content/products/sugilite/bar.json";
 import s001 from "@/content/products/sugilite/s001.json";
 import tourmalineRainbow from "@/content/products/tourmaline/rainbow.json";
 import siteJson from "@/content/site.json";
-import type { Article, BlogCategory, Category, EffectGroup, Partner, Product, SiteContent } from "@/lib/types";
+import type {
+  Article,
+  BlogCategory,
+  Category,
+  CategoryHowto,
+  EffectGroup,
+  Partner,
+  Product,
+  SiteContent,
+} from "@/lib/types";
 
 export const site = siteJson as SiteContent;
 export const categories = categoriesJson as Category[];
@@ -68,6 +77,11 @@ export function childCategories(parentId: string) {
 
 export function categoryById(id: string) {
   return categories.find((category) => category.id === id);
+}
+
+export function categoryHowtos(category: Category): CategoryHowto[] {
+  if (!category.howto) return [];
+  return Array.isArray(category.howto) ? category.howto : [category.howto];
 }
 
 export function categoryPath(category: Category) {

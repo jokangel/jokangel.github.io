@@ -1,11 +1,34 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLocale } from "@/components/LocaleProvider";
 import { MobileNav } from "@/components/MobileNav";
+import { useProductSearch } from "@/components/ProductSearch";
+import { SearchBar } from "@/components/SearchBar";
 import { TopNav } from "@/components/TopNav";
+
+function HeaderSearch() {
+  const { query, setQuery } = useProductSearch();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  return (
+    <SearchBar
+      compact
+      value={query}
+      className="mt-2"
+      onChange={(value) => {
+        setQuery(value);
+        if (value.trim() && !pathname.startsWith("/products")) {
+          router.push("/products/");
+        }
+      }}
+    />
+  );
+}
 
 export function Navbar() {
   const { t } = useLocale();
@@ -39,13 +62,18 @@ export function Navbar() {
               {t("nav.menu")}
             </button>
           </div>
-          <div className="hidden items-start lg:grid lg:grid-cols-[12rem_minmax(0,1fr)_12rem] lg:gap-x-4">
+          <div className="mt-3 lg:hidden">
+            <LanguageSwitcher className="justify-end" />
+            <HeaderSearch />
+          </div>
+          <div className="hidden items-start lg:grid lg:grid-cols-[12rem_minmax(0,1fr)_14rem] lg:gap-x-4">
             <Link href="/" className="justify-self-start">
               <img src="/images/brand/wordmark.jpg" alt="JOKAngel Crystal" className="h-14 w-auto" />
             </Link>
             <TopNav className="flex min-w-0 flex-col justify-center gap-y-1.5 text-[13px] leading-6 text-muted" />
             <div className="justify-self-end pt-1">
-              <LanguageSwitcher />
+              <LanguageSwitcher className="justify-end" />
+              <HeaderSearch />
             </div>
           </div>
         </div>

@@ -6,21 +6,27 @@ import { PageHeader } from "@/components/PageHeader";
 import { ProductBrowser } from "@/components/ProductBrowser";
 import { Section } from "@/components/Section";
 import { useLocale } from "@/components/LocaleProvider";
-import { categoryById } from "@/lib/content";
+import { categoryById, categoryHowtos } from "@/lib/content";
+
+const featureBackground: Record<string, string> = {
+  "amethyst-geode": "/images/backgrounds/amethyst-geode-cave-bg.jpg",
+  sugilite: "/images/backgrounds/sugilite-bg.jpg",
+};
 
 export function CategoryPageView({ categoryId }: { categoryId: string }) {
   const { t, l } = useLocale();
   const category = categoryById(categoryId);
   if (!category) return null;
 
-  if (categoryId === "amethyst-geode") {
+  const background = featureBackground[categoryId];
+  if (background) {
     return (
       <div className="relative overflow-hidden">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(/images/backgrounds/amethyst-geode-cave-bg.jpg)",
+            backgroundImage: `url(${background})`,
             filter: "brightness(1.35) saturate(0.75) contrast(0.92)",
           }}
         />
@@ -34,17 +40,45 @@ export function CategoryPageView({ categoryId }: { categoryId: string }) {
             <h1 className="font-display text-4xl text-ink md:text-5xl">{l(category.name)}</h1>
             <div className="gold-line mt-3 mb-5 h-px w-24" />
             {category.intro ? (
-              <p className="mb-5 overflow-x-auto whitespace-nowrap text-sm leading-7 text-muted md:text-base">
+              <p
+                className={`mb-5 text-sm leading-7 text-muted md:text-base ${
+                  categoryId === "sugilite"
+                    ? "max-w-3xl"
+                    : "overflow-x-auto whitespace-nowrap"
+                }`}
+              >
                 {l(category.intro)}
               </p>
             ) : null}
-            {category.howto ? (
+            {categoryHowtos(category).map((howto) => (
               <CategoryHowto
-                howto={category.howto}
+                key={howto.title["zh-Hant"]}
+                howto={howto}
                 className="mb-8 border-gold/20 bg-bg-elev/70 backdrop-blur-sm"
               />
-            ) : null}
+            ))}
             <ProductBrowser initialCategory={categoryId} />
+            {categoryId === "sugilite" ? (
+              <p className="mt-8 text-[11px] leading-5 text-muted/80">
+                <a
+                  href="https://commons.wikimedia.org/wiki/File:Sugilite_1.jpg"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-gold/30 underline-offset-2 hover:text-gold"
+                >
+                  Géry Parent / Wikimedia Commons
+                </a>
+                {" · "}
+                <a
+                  href="https://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-gold/30 underline-offset-2 hover:text-gold"
+                >
+                  CC BY-SA 4.0
+                </a>
+              </p>
+            ) : null}
           </section>
         </Container>
       </div>
@@ -59,7 +93,9 @@ export function CategoryPageView({ categoryId }: { categoryId: string }) {
           kicker={category.theme ? l(category.theme) : t("products.title")}
         />
         {category.intro ? <p className="mb-8 max-w-2xl text-muted">{l(category.intro)}</p> : null}
-        {category.howto ? <CategoryHowto howto={category.howto} /> : null}
+        {categoryHowtos(category).map((howto) => (
+          <CategoryHowto key={howto.title["zh-Hant"]} howto={howto} />
+        ))}
         <ProductBrowser initialCategory={categoryId} />
       </Section>
     </Container>

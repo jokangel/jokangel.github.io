@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { Footer } from "@/components/Footer";
 import { LocaleProvider, useLocale } from "@/components/LocaleProvider";
 import { Navbar } from "@/components/Navbar";
+import { ProductSearchProvider } from "@/components/ProductSearch";
 import { ScrollCraft } from "@/components/ScrollCraft";
 import { SiteNotice } from "@/components/SiteNotice";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -32,7 +33,9 @@ function Shell({ children }: { children: ReactNode }) {
 export function AppShell({ children }: { children: ReactNode }) {
   return (
     <LocaleProvider>
-      <Shell>{children}</Shell>
+      <ProductSearchProvider>
+        <Shell>{children}</Shell>
+      </ProductSearchProvider>
     </LocaleProvider>
   );
 }

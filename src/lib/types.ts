@@ -22,7 +22,7 @@ export type Product = {
 
 export type CategoryHowto = {
   title: Localized;
-  lead: Localized;
+  lead?: Localized;
   steps: { title: Localized; text: Localized }[];
 };
 
@@ -34,7 +34,7 @@ export type Category = {
   name: Localized;
   theme?: Localized;
   intro: Localized;
-  howto?: CategoryHowto;
+  howto?: CategoryHowto | CategoryHowto[];
 };
 
 export type Partner = {

@@ -9,7 +9,7 @@ export function CategoryHowto({ howto, className = "" }: { howto: HowTo; classNa
   return (
     <div className={`mb-10 max-w-2xl rounded-2xl border border-gold/15 bg-bg-elev px-5 py-6 ${className}`}>
       <h2 className="font-display text-2xl text-ink">{l(howto.title)}</h2>
-      <p className="mt-3 leading-7 text-muted">{l(howto.lead)}</p>
+      {howto.lead ? <p className="mt-3 leading-7 text-muted">{l(howto.lead)}</p> : null}
       <ol className="mt-5 space-y-4">
         {howto.steps.map((step, index) => (
           <li key={step.title["zh-Hant"]} className="flex gap-3">

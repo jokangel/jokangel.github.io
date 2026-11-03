@@ -6,7 +6,7 @@ import { ProductGallery } from "@/components/ProductGallery";
 import { StatusBadge } from "@/components/StatusBadge";
 import { useLocale } from "@/components/LocaleProvider";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { categoryById } from "@/lib/content";
+import { categoryById, categoryHowtos } from "@/lib/content";
 import type { Product } from "@/lib/types";
 
 export function ProductDetail({ product }: { product: Product }) {
@@ -26,9 +26,11 @@ export function ProductDetail({ product }: { product: Product }) {
         </div>
         <p className="mt-5 text-muted">{t("product.unique")}</p>
         <p className="mt-4 leading-7 text-muted">{l(product.description)}</p>
-        {category?.howto ? (
+        {category && categoryHowtos(category).length ? (
           <div className="mt-8">
-            <CategoryHowto howto={category.howto} />
+            {categoryHowtos(category).map((howto) => (
+              <CategoryHowto key={howto.title["zh-Hant"]} howto={howto} />
+            ))}
           </div>
         ) : null}
         <div className="mt-8 flex flex-wrap gap-3">

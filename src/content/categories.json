@@ -69,7 +69,117 @@
     "visible": true,
     "name": { "zh-Hant": "舒俱萊", "zh-Hans": "舒俱来", "en": "Sugilite" },
     "theme": { "zh-Hant": "健康之石", "zh-Hans": "健康之石", "en": "Health" },
-    "intro": { "zh-Hant": "舒俱萊手串。", "zh-Hans": "舒俱来手串。", "en": "Sugilite bracelets." }
+    "intro": {
+      "zh-Hant": "舒俱萊石（Sugilite，又稱蘇紀石、杉石或千禧之石）是一種稀有的紫色矽酸鹽礦物。它最早於1944年由日本地質學家杉健一（Kenichi Sugi）發現並以其名字命名，後來於1979年在南非 Wessels 礦場發現了寶石級的礦源，自此被譽為「南非國寶石」。",
+      "zh-Hans": "舒俱来石（Sugilite，又称苏纪石、杉石或千禧之石）是一种稀有的紫色硅酸盐矿物。它最早于1944年由日本地质学家杉健一（Kenichi Sugi）发现并以其名字命名，后来于1979年在南非 Wessels 矿场发现了宝石级的矿源，自此被誉为「南非国宝石」。",
+      "en": "Sugilite, also known as sujilite, sugi stone, or the millennium stone, is a rare purple silicate mineral. Japanese geologist Kenichi Sugi first identified it in 1944, and it was named after him. Gem-quality material was found in 1979 at the Wessels Mine in South Africa, and it has since been called South Africa’s national gemstone."
+    },
+    "howto": [
+    {
+      "title": {
+        "zh-Hant": "基本礦物資料",
+        "zh-Hans": "基本矿物资料",
+        "en": "Mineral profile"
+      },
+      "steps": [
+        {
+          "title": { "zh-Hant": "成分", "zh-Hans": "成分", "en": "Composition" },
+          "text": {
+            "zh-Hant": "多種礦物元素組成的環矽酸鹽礦物（包含鉀、鈉、鐵、鋰等）。",
+            "zh-Hans": "多种矿物元素组成的环硅酸盐矿物（包含钾、钠、铁、锂等）。",
+            "en": "A cyclosilicate made up of several elements, including potassium, sodium, iron, and lithium."
+          }
+        },
+        {
+          "title": { "zh-Hant": "硬度", "zh-Hans": "硬度", "en": "Hardness" },
+          "text": {
+            "zh-Hant": "摩氏硬度約為 5.5 - 6.5，質地較脆，需避免猛烈碰撞。",
+            "zh-Hans": "摩氏硬度约为 5.5 - 6.5，质地较脆，需避免猛烈碰撞。",
+            "en": "About 5.5–6.5 on the Mohs scale. It is relatively brittle, so avoid hard knocks."
+          }
+        },
+        {
+          "title": { "zh-Hant": "外觀色澤", "zh-Hans": "外观色泽", "en": "Colour" },
+          "text": {
+            "zh-Hant": "呈現深淺不一的紫色、紫紅色、藍紫色，常伴隨黑、褐、灰或白色的共生礦物。",
+            "zh-Hans": "呈现深浅不一的紫色、紫红色、蓝紫色，常伴随黑、褐、灰或白色的共生矿物。",
+            "en": "Shades of purple, purplish red, and bluish purple, often with black, brown, grey, or white associated minerals."
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "zh-Hant": "常見等級與品種",
+        "zh-Hans": "常见等级与品种",
+        "en": "Common grades and varieties"
+      },
+      "lead": {
+        "zh-Hant": "舒俱萊的市場分級主要依據顏色與透度：",
+        "zh-Hans": "舒俱来的市场分级主要依据颜色与透度：",
+        "en": "Sugilite is graded mainly by colour and transparency:"
+      },
+      "steps": [
+        {
+          "title": { "zh-Hant": "皇家帝王紫（Royal Purple）", "zh-Hans": "皇家帝王紫（Royal Purple）", "en": "Royal Purple" },
+          "text": {
+            "zh-Hant": "正紫色、豔紫色、飽和度高，部分帶有半透明冰種或果凍感，為最高級與收藏級。",
+            "zh-Hans": "正紫色、艳紫色、饱和度高，部分带有半透明冰种或果冻感，为最高级与收藏级。",
+            "en": "A true, vivid purple with high saturation. Some pieces are semi-transparent, with an icy or jelly-like look. This is the top collector grade."
+          }
+        },
+        {
+          "title": { "zh-Hant": "櫻花紫 / 紫羅蘭色", "zh-Hans": "樱花紫 / 紫罗兰色", "en": "Cherry purple / violet" },
+          "text": {
+            "zh-Hant": "粉紫、淡紫帶粉或紫紅色，質感溫柔。",
+            "zh-Hans": "粉紫、淡紫带粉或紫红色，质感温柔。",
+            "en": "Pinkish purple, pale purple with a pink cast, or purplish red, with a softer look."
+          }
+        },
+        {
+          "title": { "zh-Hant": "一般紫 / 深色不透光系", "zh-Hans": "一般紫 / 深色不透光系", "en": "Standard purple / dark opaque" },
+          "text": {
+            "zh-Hant": "紫色中夾雜較多黑色或褐色共生礦，價格相對親民。",
+            "zh-Hans": "紫色中夹杂较多黑色或褐色共生矿，价格相对亲民。",
+            "en": "Purple with more black or brown associated minerals, at a more accessible price."
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "zh-Hant": "特殊共生色",
+        "zh-Hans": "特殊共生色",
+        "en": "Special associated colours"
+      },
+      "steps": [
+        {
+          "title": { "zh-Hant": "藍舒俱萊", "zh-Hans": "蓝舒俱来", "en": "Blue sugilite" },
+          "text": {
+            "zh-Hant": "共生禮索石（Richterite），呈藍色或靛青色。",
+            "zh-Hans": "共生礼索石（Richterite），呈蓝色或靛青色。",
+            "en": "Occurs with richterite, in blue or indigo."
+          }
+        },
+        {
+          "title": { "zh-Hant": "粉舒俱萊", "zh-Hans": "粉舒俱来", "en": "Pink sugilite" },
+          "text": {
+            "zh-Hant": "共生布斯塔米特石（Bustamite），呈粉紅至紅褐色。",
+            "zh-Hans": "共生布斯塔米特石（Bustamite），呈粉红至红褐色。",
+            "en": "Occurs with bustamite, from pink to reddish brown."
+          }
+        },
+        {
+          "title": { "zh-Hant": "鐵舒俱萊", "zh-Hans": "铁舒俱来", "en": "Iron sugilite" },
+          "text": {
+            "zh-Hant": "共生赤鐵礦，帶有鐵灰色金屬光澤。",
+            "zh-Hans": "共生赤铁矿，带有铁灰色金属光泽。",
+            "en": "Occurs with hematite, with an iron-grey metallic lustre."
+          }
+        }
+      ]
+    }
+    ]
   },
   {
     "id": "sunstone",
