@@ -14,6 +14,7 @@ export type Product = {
   name: Localized;
   summary: Localized;
   description: Localized;
+  points?: Localized[];
   images: string[];
   videos: string[];
   featured: boolean;

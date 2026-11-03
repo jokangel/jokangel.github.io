@@ -6,9 +6,29 @@
   "subcategory": null,
   "status": "published",
   "name": { "zh-Hant": "舒俱萊手串", "zh-Hans": "舒俱来手串", "en": "Sugilite Bracelet" },
-  "summary": { "zh-Hant": "舒俱萊珠手串。", "zh-Hans": "舒俱来珠手串。", "en": "A sugilite bead bracelet." },
+  "summary": {
+    "zh-Hant": "高質南非舒俱萊 · 11m+ / 12m+",
+    "zh-Hans": "高质南非舒俱来 · 11m+ / 12m+",
+    "en": "High-grade South African sugilite · 11mm+ / 12mm+"
+  },
   "description": { "zh-Hant": "歡迎預約親身睇貨。", "zh-Hans": "欢迎预约亲身看货。", "en": "Book an appointment to view this piece." },
-  "images": ["sugilite/s001.jpg"],
+  "points": [
+    { "zh-Hant": "11m+ / 12m+", "zh-Hans": "11m+ / 12m+", "en": "11mm+ / 12mm+" },
+    { "zh-Hant": "高質南非舒俱萊", "zh-Hans": "高质南非舒俱来", "en": "High-grade South African sugilite" },
+    { "zh-Hant": "市價 $26000～$36000", "zh-Hans": "市价 $26000～$36000", "en": "Market price $26,000–$36,000" },
+    { "zh-Hant": "歡迎「結緣價」購訂", "zh-Hans": "欢迎「结缘价」购订", "en": "Orders welcome at a connection price" },
+    { "zh-Hant": "可代申請「專業鑒證」", "zh-Hans": "可代申请「专业鉴证」", "en": "Professional authentication can be arranged" }
+  ],
+  "images": [
+    "sugilite/s001-01.jpg",
+    "sugilite/s001-02.jpg",
+    "sugilite/s001-03.jpg",
+    "sugilite/s001-04.jpg",
+    "sugilite/s001-05.jpg",
+    "sugilite/s001-06.jpg",
+    "sugilite/s001-07.jpg",
+    "sugilite/s001-08.jpg"
+  ],
   "videos": [],
   "featured": false,
   "whatsappPrefill": {

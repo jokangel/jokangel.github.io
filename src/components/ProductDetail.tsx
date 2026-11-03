@@ -24,15 +24,16 @@ export function ProductDetail({ product }: { product: Product }) {
           <h1 className="font-display text-4xl text-ink">{l(product.name)}</h1>
           <StatusBadge status={product.status} />
         </div>
-        <p className="mt-5 text-muted">{t("product.unique")}</p>
-        <p className="mt-4 leading-7 text-muted">{l(product.description)}</p>
-        {category && categoryHowtos(category).length ? (
-          <div className="mt-8">
-            {categoryHowtos(category).map((howto) => (
-              <CategoryHowto key={howto.title["zh-Hant"]} howto={howto} />
+        {product.points?.length ? (
+          <ul className="mt-6 list-none space-y-2 pl-0">
+            {product.points.map((point) => (
+              <li key={point["zh-Hant"]} className="leading-7 text-ink">
+                {l(point)}
+              </li>
             ))}
-          </div>
+          </ul>
         ) : null}
+        <p className="mt-5 leading-7 text-muted">{l(product.description)}</p>
         <div className="mt-8 flex flex-wrap gap-3">
           <WhatsAppButton
             message={product.whatsappPrefill}
@@ -47,6 +48,13 @@ export function ProductDetail({ product }: { product: Product }) {
             </Link>
           ) : null}
         </div>
+        {category && categoryHowtos(category).length ? (
+          <div className="mt-8">
+            {categoryHowtos(category).map((howto) => (
+              <CategoryHowto key={howto.title["zh-Hant"]} howto={howto} />
+            ))}
+          </div>
+        ) : null}
       </div>
     </div>
   );

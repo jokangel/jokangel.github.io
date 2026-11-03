@@ -15,13 +15,13 @@ export function ProductGallery({ images, alt }: { images: string[]; alt: string 
         <img src={imageSrc(current)} alt={alt} className="aspect-square w-full object-cover" />
       </div>
       {images.length > 1 ? (
-        <div className="mt-4 flex gap-3 overflow-x-auto">
-          {images.map((image, index) => (
+        <div className="mt-4 grid grid-cols-6 gap-2">
+          {images.slice(0, 18).map((image, index) => (
             <button
               key={image}
               type="button"
               onClick={() => setActive(index)}
-              className={`h-20 w-20 shrink-0 overflow-hidden rounded-2xl border ${
+              className={`aspect-square overflow-hidden rounded-xl border ${
                 index === active ? "border-gold" : "border-gold/15"
               }`}
             >
