@@ -68,11 +68,16 @@
     "parent": "crystals",
     "visible": true,
     "name": { "zh-Hant": "舒俱萊", "zh-Hans": "舒俱来", "en": "Sugilite" },
-    "theme": { "zh-Hant": "健康之石", "zh-Hans": "健康之石", "en": "Health" },
+    "theme": { "zh-Hant": "健康之石", "zh-Hans": "健康之石", "en": "Stone of health" },
     "intro": {
       "zh-Hant": "舒俱萊石（Sugilite，又稱蘇紀石、杉石或千禧之石）是一種稀有的紫色矽酸鹽礦物。它最早於1944年由日本地質學家杉健一（Kenichi Sugi）發現並以其名字命名，後來於1979年在南非 Wessels 礦場發現了寶石級的礦源，自此被譽為「南非國寶石」。",
       "zh-Hans": "舒俱来石（Sugilite，又称苏纪石、杉石或千禧之石）是一种稀有的紫色硅酸盐矿物。它最早于1944年由日本地质学家杉健一（Kenichi Sugi）发现并以其名字命名，后来于1979年在南非 Wessels 矿场发现了宝石级的矿源，自此被誉为「南非国宝石」。",
       "en": "Sugilite, also known as sujilite, sugi stone, or the millennium stone, is a rare purple silicate mineral. Japanese geologist Kenichi Sugi first identified it in 1944, and it was named after him. Gem-quality material was found in 1979 at the Wessels Mine in South Africa, and it has since been called South Africa’s national gemstone."
+    },
+    "note": {
+      "zh-Hant": "雖然坊間常將舒俱萊稱為「抗癌寶石」或「因果石」，但這種說法主要建立在心理暗示、能量信念或身心靈排毒的觀念上，並不具備實質的醫療價值。",
+      "zh-Hans": "虽然坊间常将舒俱来称为「抗癌宝石」或「因果石」，但这种说法主要建立在心理暗示、能量信念或身心灵排毒的观念上，并不具备实质的医疗价值。",
+      "en": "Sugilite is often called an “anti-cancer gemstone” or a “karma stone” in the trade, but those names rest on suggestion, energy beliefs, or ideas of spiritual cleansing. They have no real medical value."
     },
     "howto": [
     {

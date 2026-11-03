@@ -3,11 +3,23 @@
 import { useLocale } from "@/components/LocaleProvider";
 import type { CategoryHowto as HowTo } from "@/lib/types";
 
-export function CategoryHowto({ howto, className = "" }: { howto: HowTo; className?: string }) {
+export function CategoryHowto({
+  howto,
+  className = "",
+  fill = false,
+}: {
+  howto: HowTo;
+  className?: string;
+  fill?: boolean;
+}) {
   const { l } = useLocale();
 
   return (
-    <div className={`mb-10 max-w-2xl rounded-2xl border border-gold/15 bg-bg-elev px-5 py-6 ${className}`}>
+    <div
+      className={`rounded-2xl border border-gold/15 bg-bg-elev px-5 py-6 ${
+        fill ? "h-full" : "mb-10 max-w-2xl"
+      } ${className}`}
+    >
       <h2 className="font-display text-2xl text-ink">{l(howto.title)}</h2>
       {howto.lead ? <p className="mt-3 leading-7 text-muted">{l(howto.lead)}</p> : null}
       <ol className="mt-5 space-y-4">

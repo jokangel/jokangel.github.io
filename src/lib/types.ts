@@ -34,6 +34,7 @@ export type Category = {
   name: Localized;
   theme?: Localized;
   intro: Localized;
+  note?: Localized;
   howto?: CategoryHowto | CategoryHowto[];
 };
 
