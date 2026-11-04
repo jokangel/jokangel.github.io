@@ -153,3 +153,7 @@ export function productPath(product: Product) {
 export function imageSrc(path: string) {
   return `/images/products/${path}`;
 }
+
+export function videoSrc(path: string) {
+  return `/videos/products/${path}`;
+}

@@ -29,7 +29,7 @@
     "sugilite/s001-07.jpg",
     "sugilite/s001-08.jpg"
   ],
-  "videos": [],
+  "videos": ["sugilite/s001-01.mp4", "sugilite/s001-02.mp4"],
   "featured": false,
   "whatsappPrefill": {
     "zh-Hant": "你好，我想預約查詢舒俱萊手串 S001。",

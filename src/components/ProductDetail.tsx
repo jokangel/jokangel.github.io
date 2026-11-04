@@ -15,7 +15,7 @@ export function ProductDetail({ product }: { product: Product }) {
 
   return (
     <div className="grid gap-10 md:grid-cols-2">
-      <ProductGallery images={product.images} alt={l(product.name)} />
+      <ProductGallery images={product.images} videos={product.videos} alt={l(product.name)} />
       <div>
         <p className="text-xs tracking-[0.24em] text-gold uppercase">
           {t("product.sku")} {product.sku}
