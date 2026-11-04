@@ -242,12 +242,13 @@ html:not(.sc-ready) [data-sc-reveal] {
 }
 
 /* --------------------------------------------------------------- about -- */
+.about-act {
+  border-bottom: 1px solid color-mix(in srgb, var(--sc-accent) 16%, transparent);
+}
+
 .about-stage {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  align-items: center;
-  gap: 3rem;
-  padding: 6.5rem var(--sc-gutter) 3rem;
+  max-width: 40rem;
+  padding: 1.15rem var(--sc-gutter) 1.75rem;
 }
 
 .about-kicker {
@@ -257,18 +258,12 @@ html:not(.sc-ready) [data-sc-reveal] {
   text-wrap: balance;
 }
 
-.about-beats {
-  position: relative;
-  min-height: 11rem;
-  margin-top: 1.75rem;
-}
-
-.about-beats p {
-  max-width: 14em;
-  font-size: clamp(1.7rem, 1rem + 1.6vw, 2.6rem);
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
+.about-copy {
+  margin-top: 0.85rem;
+  white-space: pre-line;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sc-ink);
 }
 
 .sc-ready .about-beats [data-sc-cue] {
@@ -439,8 +434,8 @@ html:not(.sc-ready) [data-sc-reveal] {
   }
 
   .about-stage {
-    align-content: center;
-    padding-top: 6rem;
+    padding-top: 0.85rem;
+    padding-bottom: 1.35rem;
   }
 
   .about-certs img {

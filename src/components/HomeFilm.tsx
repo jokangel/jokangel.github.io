@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { CertificationRow } from "@/components/CertificationRow";
 import { useLocale } from "@/components/LocaleProvider";
 import { featuredProducts, imageSrc, productPath, site } from "@/lib/content";
 
@@ -11,6 +10,13 @@ export function HomeFilm() {
 
   return (
     <div className="home-film">
+      <section className="about-act">
+        <div className="about-stage">
+          <h2 className="about-kicker font-display">{t("about.title")}</h2>
+          <p className="about-copy">{l(site.about)}</p>
+        </div>
+      </section>
+
       <section className="hero-act" data-sc-act="flow" data-sc-drift="#120a24">
         <div className="hero-stage">
           <div className="hero-atmo" data-sc-parallax="-1.3" aria-hidden="true" />
@@ -44,28 +50,6 @@ export function HomeFilm() {
           <div className="hero-fore" data-sc-parallax="0.85" aria-hidden="true">
             <span />
             <span />
-          </div>
-        </div>
-      </section>
-
-      <section data-sc-act="pin" data-sc-span="2.4" data-sc-drift="#1a1033">
-        <div className="about-stage" data-sc-stage>
-          <div>
-            <h2 className="about-kicker font-display">{t("about.title")}</h2>
-            <div className="about-beats">
-              <p className="font-display" data-sc-cue="0 0.46 0">
-                {t("about.beat1")}
-              </p>
-              <p className="font-display" data-sc-cue="0.28 0.7" data-sc-kinetic="words">
-                {t("about.beat2")}
-              </p>
-              <p className="font-display" data-sc-cue="0.58 1">
-                {t("about.beat3")}
-              </p>
-            </div>
-          </div>
-          <div className="about-certs">
-            <CertificationRow />
           </div>
         </div>
       </section>
